@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Om os · Trafikparat</title>
+  <meta name="description" content="Om Trafikparat — en køreskole i Aalborg, hvor du som elev er omdrejningspunktet. Vores filosofi, vores tilgang og vores tre principper." />
+  <meta name="theme-color" content="#047857" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <span data-i18n-title="nav.about" style="display:none"></span>
+</head>
+<body>
+
+  <!-- ============= NAV ============= -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="Trafikparat">
+        <img src="assets/logo.svg" alt="" width="36" height="36" />
+        <span>Trafikparat</span>
+      </a>
+      <nav class="nav__menu" aria-label="Hovedmenu">
+        <a href="index.html" class="nav__link" data-i18n="nav.home">Forside</a>
+        <a href="holdstart.html" class="nav__link" data-i18n="nav.courses">Holdstart</a>
+        <a href="saerlige-behov.html" class="nav__link" data-i18n="nav.support">Særlige behov</a>
+        <a href="om-os.html" class="nav__link is-active" data-i18n="nav.about">Om os</a>
+        <a href="kontakt.html" class="nav__link" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="lang">
+          <button type="button" class="lang__toggle" data-lang-toggle aria-haspopup="true" aria-expanded="false">
+            <span class="lang__flag" data-lang-flag>🇩🇰</span>
+            <span data-lang-current>DA</span>
+            <svg class="lang__caret" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="lang__menu" data-lang-menu role="menu"></div>
+        </div>
+        <a href="kontakt.html" class="btn btn--primary btn--sm" data-i18n="nav.signUp">Tilmeld dig</a>
+        <button type="button" class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============= PAGE HERO ============= -->
+  <section class="page-hero">
+    <div class="container">
+      <div data-reveal>
+        <span class="eyebrow" data-i18n="about.eyebrow">Vores filosofi</span>
+        <h1 class="page-hero__title" data-i18n="about.heroTitle">Om Trafikparat</h1>
+        <p class="page-hero__lead" data-i18n="about.heroLead">En køreskole i Aalborg, hvor du som elev er omdrejningspunktet — og hvor vi tror på, at god kørsel starter med god undervisning.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= STORY ============= -->
+  <section class="section section--tight">
+    <div class="container container-narrow">
+      <div data-reveal>
+        <h2 class="section-title" style="text-align: center; margin-bottom: 3rem;" data-i18n="about.sectionTitle">Velkommen til vores køreskole</h2>
+        <div style="display: flex; flex-direction: column; gap: 1.5rem; font-size: 1.05rem; line-height: 1.75; color: var(--color-ink-700);">
+          <p data-i18n="about.body1">Vi ved, at det kan være en udfordrende og spændende tid at lære at køre bil. Derfor er vores mål at give dig en tryg og støttende læringsoplevelse, hvor du får mest muligt ud af din tid hos os.</p>
+          <p data-i18n="about.body2">Vi tilbyder en bred vifte af undervisningsmetoder og -materialer, der kan tilpasses til dine individuelle behov og læringsstil. Vores undervisere er erfarne og certificerede, og de er dedikerede til at hjælpe dig med at opbygge de nødvendige færdigheder og selvtillid til at blive en sikker og ansvarlig bilist.</p>
+          <p data-i18n="about.body3">Vi tror på, at den bedste måde at lære at køre bil på er ved at praktisere, så vores undervisning er meget praksisorienteret. Du får masser af øvelsestid på vejene i et sikkert og kontrolleret miljø, så du føler dig tryg og forberedt, når du tager din køreprøve.</p>
+          <p data-i18n="about.body4">Vi er stolte af vores høje succesrate blandt vores elever, og vi glæder os til at hjælpe dig med at nå dit mål om at blive en sikker og dygtig bilist.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= PILLARS ============= -->
+  <section class="section" style="background: linear-gradient(180deg, #ECFDF5 0%, transparent 100%);">
+    <div class="container">
+      <header class="section-header" data-reveal>
+        <span class="eyebrow" data-i18n="pillars.eyebrow">Vores tilgang</span>
+        <h2 class="section-title" data-i18n="pillars.title">Tre principper, der ændrer, hvordan du kører</h2>
+        <p class="section-lead" data-i18n="pillars.lead">Vi underviser ikke bare i køreteknik — vi underviser i den mentale side af at færdes i trafikken.</p>
+      </header>
+
+      <div class="pillars">
+        <article class="pillar" data-reveal>
+          <div class="pillar__number">01</div>
+          <h3 class="pillar__title" data-i18n="pillars.p1Title">Forbedret fokus</h3>
+          <p class="pillar__text" data-i18n="pillars.p1Text">Fokus er en filtrering af indtryk. Vi træner dig i at udelukke det støj, der forstyrrer din intention, så du holder hovedet på den vigtige opgave: at køre sikkert.</p>
+        </article>
+        <article class="pillar" data-reveal>
+          <div class="pillar__number">02</div>
+          <h3 class="pillar__title" data-i18n="pillars.p2Title">Mindre stress og angst</h3>
+          <p class="pillar__text" data-i18n="pillars.p2Text">Stress er en naturlig biologisk mekanisme — men i trafikken skal den styres. Vi giver dig værktøjer til at håndtere presset bag rattet med ro.</p>
+        </article>
+        <article class="pillar" data-reveal>
+          <div class="pillar__number">03</div>
+          <h3 class="pillar__title" data-i18n="pillars.p3Title">Øget bevidsthed</h3>
+          <p class="pillar__text" data-i18n="pillars.p3Text">Din kørelærer optimerer din evne til at opfatte, forstå og være opmærksom på omgivelserne, så du ikke bare reagerer — men forudser.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= FEATURES RECAP ============= -->
+  <section class="section">
+    <div class="container">
+      <header class="section-header" data-reveal>
+        <span class="eyebrow" data-i18n="features.eyebrow">Hvorfor Trafikparat</span>
+        <h2 class="section-title" data-i18n="features.title">En køreskole bygget på tryghed og kvalitet</h2>
+      </header>
+
+      <div class="features">
+        <article class="feature" data-reveal>
+          <div class="feature__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 14a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M6 21v-1a6 6 0 0112 0v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="feature__title" data-i18n="features.f1Title">Lærere i verdensklasse</h3>
+          <p class="feature__text" data-i18n="features.f1Text">Erfarne, certificerede kørelærere med fokus på den enkelte elevs behov.</p>
+        </article>
+        <article class="feature" data-reveal>
+          <div class="feature__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="7" cy="8" r="3" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="17" cy="8" r="3" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M2 19v-1a4 4 0 014-4h2a4 4 0 014 4v1M14 19v-1a4 4 0 014-4h2a4 4 0 014 4v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="feature__title" data-i18n="features.f2Title">Maks. 6 elever pr. hold</h3>
+          <p class="feature__text" data-i18n="features.f2Text">Små hold giver mere tid til dig og en bedre forudsætning for at lære.</p>
+        </article>
+        <article class="feature" data-reveal>
+          <div class="feature__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M4 5a2 2 0 012-2h8l6 6v10a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M8 13l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="feature__title" data-i18n="features.f3Title">Ubegrænset teori</h3>
+          <p class="feature__text" data-i18n="features.f3Text">Adgang til teorilektioner, online prøver og materialer pr. lovpakke — uden begrænsninger.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= CTA ============= -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner" data-reveal>
+        <div>
+          <h2 data-i18n="ctaBanner.title">Klar til at komme i gang?</h2>
+          <p data-i18n="ctaBanner.text">Tag det første skridt mod kørekortet. Vi sidder klar til en uforpligtende snak.</p>
+        </div>
+        <div class="cta-banner__actions">
+          <a href="kontakt.html" class="btn btn--primary btn--large" data-i18n="ctaBanner.primary">Kontakt os</a>
+          <a href="tel:60217181" class="btn btn--secondary btn--large">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="ctaBanner.secondary">Ring 60217181</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= FOOTER ============= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">
+            <img src="assets/logo.svg" alt="" width="40" height="40" />
+            <span>Trafikparat</span>
+          </div>
+          <p class="footer__tagline" data-i18n="footer.tagline">Køreskole i Aalborg, der sætter den enkelte elev i centrum.</p>
+          <div class="footer__social">
+            <a href="https://facebook.com/trafikparat" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.33v6.99C18.34 21.13 22 16.99 22 12z"/></svg>
+            </a>
+            <a href="https://instagram.com/trafikparat" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.explore">Udforsk</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Forside</a></li>
+            <li><a href="holdstart.html" data-i18n="nav.courses">Holdstart</a></li>
+            <li><a href="saerlige-behov.html" data-i18n="nav.support">Særlige behov</a></li>
+            <li><a href="om-os.html" data-i18n="nav.about">Om os</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.services">Kurser</h4>
+          <ul>
+            <li><a href="holdstart.html#cat-b" data-i18n="courses.catBTitle">Kategori B</a></li>
+            <li><a href="holdstart.html#cat-a" data-i18n="courses.catATitle">Kategori A</a></li>
+            <li><a href="holdstart.html#routine" data-i18n="courses.routineTitle">Rutinekørsel</a></li>
+            <li><a href="holdstart.html#instructor" data-i18n="courses.instructorTitle">Kørelæreruddannelsen</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.contact">Kontakt</h4>
+          <ul>
+            <li><a href="tel:60217181">60 21 71 81</a></li>
+            <li><a href="mailto:info@trafikparat.dk">info@trafikparat.dk</a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Maren+Turis+Gade+2%2C+9000+Aalborg" target="_blank" rel="noopener">Maren Turis Gade 2<br/>9000 Aalborg</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="footer-year"></span> Trafikparat · <span data-i18n="footer.cvr">CVR 39757389</span></span>
+        <span data-i18n="footer.rights">Alle rettigheder forbeholdes.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

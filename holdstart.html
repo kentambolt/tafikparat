@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holdstart · Trafikparat</title>
+  <meta name="description" content="Aktuelle holdstart, kurser og priser hos Trafikparat. Kategori B, Kategori A, kørelæreruddannelsen, køreteknisk kursus og generhvervelse." />
+  <meta name="theme-color" content="#047857" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <span data-i18n-title="nav.courses" style="display:none"></span>
+</head>
+<body>
+
+  <!-- ============= NAV ============= -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__brand" aria-label="Trafikparat">
+        <img src="assets/logo.svg" alt="" width="36" height="36" />
+        <span>Trafikparat</span>
+      </a>
+      <nav class="nav__menu" aria-label="Hovedmenu">
+        <a href="index.html" class="nav__link" data-i18n="nav.home">Forside</a>
+        <a href="holdstart.html" class="nav__link is-active" data-i18n="nav.courses">Holdstart</a>
+        <a href="saerlige-behov.html" class="nav__link" data-i18n="nav.support">Særlige behov</a>
+        <a href="om-os.html" class="nav__link" data-i18n="nav.about">Om os</a>
+        <a href="kontakt.html" class="nav__link" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+      <div class="nav__actions">
+        <div class="lang">
+          <button type="button" class="lang__toggle" data-lang-toggle aria-haspopup="true" aria-expanded="false">
+            <span class="lang__flag" data-lang-flag>🇩🇰</span>
+            <span data-lang-current>DA</span>
+            <svg class="lang__caret" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="lang__menu" data-lang-menu role="menu"></div>
+        </div>
+        <a href="kontakt.html" class="btn btn--primary btn--sm" data-i18n="nav.signUp">Tilmeld dig</a>
+        <button type="button" class="nav__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============= PAGE HERO ============= -->
+  <section class="page-hero">
+    <div class="container">
+      <div data-reveal>
+        <h1 class="page-hero__title" data-i18n="courses.heroTitle">Holdstart, kurser og uddannelse</h1>
+        <p class="page-hero__lead" data-i18n="courses.heroLead">Aktuelle holdstart på køreuddannelser og kurser hos Trafikparat. Klare priser, transparent lovpakke.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= MAIN COURSES ============= -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="courses">
+
+        <!-- Kategori B -->
+        <article class="course-card course-card--featured" id="cat-b" data-reveal>
+          <span class="course-card__badge" data-i18n="courses.popular">Populær</span>
+          <div class="course-card__media">
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="https://trafikparat.dk/onewebmedia/pexels-gustavo-fring-5391318.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="course-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 11l1.5-4.5A2 2 0 018.4 5h7.2a2 2 0 011.9 1.5L19 11M5 11h14M5 11v6h2v2h2v-2h6v2h2v-2h2v-6" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <circle cx="8" cy="14.5" r="1" fill="currentColor"/>
+              <circle cx="16" cy="14.5" r="1" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="course-card__title" data-i18n="courses.catBTitle">Kategori B</h3>
+          <p class="course-card__subtitle" data-i18n="courses.catBSubtitle">Bilkørekort — den klassiske vej til kørekortet</p>
+          <div class="course-card__price-row">
+            <span class="course-card__price" data-i18n="courses.catBPrice">17.900 kr</span>
+          </div>
+          <ul class="course-card__features">
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catBFeature1">28 × teorilektioner</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catBFeature2">4 × lektioner på øvebane</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catBFeature3">4 × lektioner på køreteknisk kursus</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catBFeature4">16 × kørelektioner</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catBFeature5">1 × leje af skolebil til køreprøven</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catBFeature6">Førstehjælpskursus</span></li>
+          </ul>
+          <a href="kontakt.html" class="btn btn--secondary" data-i18n="courses.signUp">Tilmeld dig</a>
+        </article>
+
+        <!-- Kategori A -->
+        <article class="course-card" id="cat-a" data-reveal>
+          <div class="course-card__media">
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="https://trafikparat.dk/onewebmedia/production%20ID_5198919.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="course-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="5.5" cy="16.5" r="3.5" stroke="currentColor" stroke-width="1.8"/>
+              <circle cx="18.5" cy="16.5" r="3.5" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M5.5 16.5L11 10h3l2-3h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11 10l2 6.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="course-card__title" data-i18n="courses.catATitle">Kategori A</h3>
+          <p class="course-card__subtitle" data-i18n="courses.catASubtitle">Motorcykelkørekort</p>
+          <div class="course-card__price-row">
+            <span class="course-card__price" data-i18n="courses.catAPrice">13.000 kr</span>
+          </div>
+          <ul class="course-card__features">
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catAFeature1">29 × teorilektioner</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catAFeature2">4 × lektioner på øvebane</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catAFeature3">5 × lektioner på køreteknisk kursus</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catAFeature4">13 × kørelektioner</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catAFeature5">1 × leje af øvebane før køreprøven</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catAFeature6">1 × leje af skolemotorcykel til prøven</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catAFeature7">1 × administrationsgebyr á 500 kr</span></li>
+          </ul>
+          <p style="font-size: 0.85rem; color: var(--color-muted); margin-bottom: 1rem; font-style: italic;" data-i18n="courses.catANote">Prøvegebyr er ikke inkluderet</p>
+          <a href="kontakt.html" class="btn btn--secondary" data-i18n="courses.signUp">Tilmeld dig</a>
+        </article>
+
+        <!-- Routine -->
+        <article class="course-card" id="routine" data-reveal>
+          <div class="course-card__media">
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="https://trafikparat.dk/onewebmedia/production%20ID_5079298.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="course-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M21 12a9 9 0 11-3-6.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M21 4v5h-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="course-card__title" data-i18n="courses.routineTitle">Rutinekørsel</h3>
+          <p class="course-card__subtitle" data-i18n="courses.routineSubtitle">Genopfrisk din kørsel med en erfaren kørelærer</p>
+          <div class="course-card__price-row">
+            <span class="course-card__price" data-i18n="courses.routinePrice">790 kr</span>
+            <span class="course-card__price-unit" data-i18n="courses.perLesson">pr. lektion (45 min)</span>
+          </div>
+          <ul class="course-card__features">
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.routineFeature1">Lektion á 45 minutter</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.routineFeature2">Tilpasset dit niveau og behov</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.routineFeature3">Ingen forpligtelse på flere lektioner</span></li>
+          </ul>
+          <a href="kontakt.html" class="btn btn--secondary" data-i18n="courses.signUp">Tilmeld dig</a>
+        </article>
+
+        <!-- Kørelæreruddannelsen -->
+        <article class="course-card" id="instructor" data-reveal>
+          <div class="course-card__media">
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="https://trafikparat.dk/onewebmedia/pexels-kindel-media-6774593.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="course-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              <path d="M6 12v5c0 1 4 3 6 3s6-2 6-3v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="course-card__title" data-i18n="courses.instructorTitle">Kørelæreruddannelsen</h3>
+          <p class="course-card__subtitle" data-i18n="courses.instructorSubtitle">Bliv kørelærer hos Trafikparat</p>
+          <div class="course-card__price-row">
+            <span class="course-card__price" style="font-size: 1.5rem;" data-i18n="courses.contactPrice">Kontakt for pris</span>
+          </div>
+          <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: 2rem; flex: 1;" data-i18n="courses.instructorText">Overvejer du at starte på kørelæreruddannelsen? Vi er erfarne, kompetente kørelærere, og vi klæder dig på til at modtage dine egne elever — med viden, erfaring og kompetencer i rygsækken.</p>
+          <a href="kontakt.html" class="btn btn--secondary" data-i18n="courses.signUp">Tilmeld dig</a>
+        </article>
+
+        <!-- Køreteknisk kursus -->
+        <article class="course-card" id="technique" data-reveal>
+          <div class="course-card__media">
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="https://trafikparat.dk/onewebmedia/production%20ID_4568686.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="course-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+            </svg>
+          </div>
+          <h3 class="course-card__title" data-i18n="courses.techniqueTitle">Køreteknisk kursus</h3>
+          <p class="course-card__subtitle" data-i18n="courses.techniqueSubtitle">På lukket øvelsesplads</p>
+          <div class="course-card__price-row">
+            <span class="course-card__price" style="font-size: 1.5rem;" data-i18n="courses.contactPrice">Kontakt for pris</span>
+          </div>
+          <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: 2rem; flex: 1;" data-i18n="courses.techniqueText">Fire timers kursus i køreteknik på lukket øvelsesplads, inklusive forplejning.</p>
+          <a href="kontakt.html" class="btn btn--secondary" data-i18n="courses.signUp">Tilmeld dig</a>
+        </article>
+
+        <!-- Generhvervelse -->
+        <article class="course-card" id="recovery" data-reveal>
+          <div class="course-card__media">
+            <video autoplay loop muted playsinline preload="metadata">
+              <source src="https://trafikparat.dk/onewebmedia/pexels-daniel-torobekov-5277922.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <div class="course-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3 12a9 9 0 1115.95 5.74" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M3 8v5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13 9l-2 4 4 0-2 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="course-card__title" data-i18n="courses.recoveryTitle">Generhvervelse af førerret</h3>
+          <p class="course-card__subtitle" data-i18n="courses.recoverySubtitle">Få dit kørekort tilbage</p>
+          <div class="course-card__price-row">
+            <span class="course-card__price" style="font-size: 1.5rem;" data-i18n="courses.contactPrice">Kontakt for pris</span>
+          </div>
+          <p style="color: var(--color-muted); font-size: 0.95rem; margin-bottom: 2rem; flex: 1;" data-i18n="courses.recoveryText">Har du mistet dit kørekort? Vi guider dig gennem generhvervelsesforløbet — fra teori til praktisk prøve.</p>
+          <a href="kontakt.html" class="btn btn--secondary" data-i18n="courses.signUp">Tilmeld dig</a>
+        </article>
+
+      </div>
+
+      <!-- Additional fees note -->
+      <div class="course-note" data-reveal style="margin-top: 4rem;">
+        <strong data-i18n="courses.additionalTitle">Øvrige udgifter i forbindelse med dit kørekort</strong>
+        <ul>
+          <li data-i18n="courses.additional1">Prøvegebyr til Færdselsstyrelsen</li>
+          <li data-i18n="courses.additional2">Leje af bil til prøven (udover dem i lovpakken)</li>
+          <li data-i18n="courses.additional3">Lægeerklæring</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= FINAL CTA ============= -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner" data-reveal>
+        <div>
+          <h2 data-i18n="ctaBanner.title">Klar til at komme i gang?</h2>
+          <p data-i18n="ctaBanner.text">Tag det første skridt mod kørekortet. Vi sidder klar til en uforpligtende snak.</p>
+        </div>
+        <div class="cta-banner__actions">
+          <a href="kontakt.html" class="btn btn--primary btn--large" data-i18n="ctaBanner.primary">Kontakt os</a>
+          <a href="tel:60217181" class="btn btn--secondary btn--large">
+            <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span data-i18n="ctaBanner.secondary">Ring 60217181</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= FOOTER ============= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand">
+            <img src="assets/logo.svg" alt="" width="40" height="40" />
+            <span>Trafikparat</span>
+          </div>
+          <p class="footer__tagline" data-i18n="footer.tagline">Køreskole i Aalborg, der sætter den enkelte elev i centrum.</p>
+          <div class="footer__social">
+            <a href="https://facebook.com/trafikparat" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.33v6.99C18.34 21.13 22 16.99 22 12z"/></svg>
+            </a>
+            <a href="https://instagram.com/trafikparat" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.explore">Udforsk</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Forside</a></li>
+            <li><a href="holdstart.html" data-i18n="nav.courses">Holdstart</a></li>
+            <li><a href="saerlige-behov.html" data-i18n="nav.support">Særlige behov</a></li>
+            <li><a href="om-os.html" data-i18n="nav.about">Om os</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.services">Kurser</h4>
+          <ul>
+            <li><a href="holdstart.html#cat-b" data-i18n="courses.catBTitle">Kategori B</a></li>
+            <li><a href="holdstart.html#cat-a" data-i18n="courses.catATitle">Kategori A</a></li>
+            <li><a href="holdstart.html#routine" data-i18n="courses.routineTitle">Rutinekørsel</a></li>
+            <li><a href="holdstart.html#instructor" data-i18n="courses.instructorTitle">Kørelæreruddannelsen</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 data-i18n="footer.contact">Kontakt</h4>
+          <ul>
+            <li><a href="tel:60217181">60 21 71 81</a></li>
+            <li><a href="mailto:info@trafikparat.dk">info@trafikparat.dk</a></li>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Maren+Turis+Gade+2%2C+9000+Aalborg" target="_blank" rel="noopener">Maren Turis Gade 2<br/>9000 Aalborg</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="footer-year"></span> Trafikparat · <span data-i18n="footer.cvr">CVR 39757389</span></span>
+        <span data-i18n="footer.rights">Alle rettigheder forbeholdes.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
