@@ -9,7 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <span data-i18n-title="nav.courses" style="display:none"></span>
 </head>
@@ -19,7 +19,7 @@
   <header class="nav">
     <div class="container nav__inner">
       <a href="index.html" class="nav__brand" aria-label="Trafikparat">
-        <img src="assets/logo.svg" alt="" width="36" height="36" />
+        <img src="assets/logo.svg" alt="" width="36" height="36" data-logo />
         <span>Trafikparat</span>
       </a>
       <nav class="nav__menu" aria-label="Hovedmenu">
@@ -31,6 +31,20 @@
         <a href="kontakt.html" class="nav__link nav__link--cta" data-i18n="nav.signUp">Tilmeld dig</a>
       </nav>
       <div class="nav__actions">
+        <div class="proposal">
+          <button type="button" class="proposal__toggle" data-proposal-toggle aria-haspopup="true" aria-expanded="false" title="Skift designforslag">
+            <svg class="proposal__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+              <path d="M12 3a9 9 0 010 18" fill="currentColor"/>
+            </svg>
+            <span class="proposal__current" data-proposal-current>Forslag 1</span>
+            <svg class="proposal__caret" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="proposal__menu" data-proposal-menu role="menu"></div>
+        </div>
+
         <div class="lang">
           <button type="button" class="lang__toggle" data-lang-toggle aria-haspopup="true" aria-expanded="false">
             <span class="lang__flag" data-lang-flag>🇩🇰</span>
@@ -258,7 +272,7 @@
       <div class="footer__grid">
         <div>
           <div class="footer__brand">
-            <img src="assets/logo.svg" alt="" width="40" height="40" />
+            <img src="assets/logo.svg" alt="" width="40" height="40" data-logo />
             <span>Trafikparat</span>
           </div>
           <p class="footer__tagline" data-i18n="footer.tagline">Køreskole i Aalborg, der sætter den enkelte elev i centrum.</p>
@@ -306,6 +320,7 @@
   </footer>
 
   <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+  <script src="js/proposal.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
