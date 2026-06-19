@@ -8,20 +8,20 @@
   'use strict';
 
   const STORAGE_KEY = 'trafikparat.proposal';
-  const DEFAULT_PROPOSAL = '1';
+  const DEFAULT_PROPOSAL = '2';
 
   const PROPOSALS = {
-    '1': {
-      label: 'Forslag 1',
-      name: 'Original',
-      desc: 'Grøn · tryg & inkluderende',
-      logo: 'assets/logo.svg',
-    },
     '2': {
       label: 'Forslag 2',
       name: 'Premium',
       desc: 'Rød & navy · automotive',
       logo: 'assets/steeringwheel.png',
+    },
+    '1': {
+      label: 'Forslag 1',
+      name: 'Original',
+      desc: 'Grøn · tryg & inkluderende',
+      logo: 'assets/logo.svg',
     },
   };
 
