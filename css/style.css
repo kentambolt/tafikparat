@@ -1488,7 +1488,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 720px) {
   .proposal__current { display: none; }
   .proposal__toggle { padding: var(--space-2); }
-  .proposal__menu { right: auto; left: 0; }
 }
 
 /* ============================================================
