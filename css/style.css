@@ -1632,11 +1632,12 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   opacity: 0.55;
 }
 [data-proposal="2"] .brand-emblem img {
-  max-width: 460px;
+  max-width: 520px;
   width: 100%;
   height: auto;
   margin: 0 auto;
   display: block;
+  filter: drop-shadow(0 8px 24px rgba(15, 26, 46, 0.15));
 }
 
 /* Forslag 2 CTA banner — bold red with white text (poster style) */
