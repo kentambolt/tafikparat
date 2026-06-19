@@ -1,20 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
   <defs>
-    <linearGradient id="tp2-red" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#E0556B"/>
-      <stop offset="55%" stop-color="#CC1C2E"/>
-      <stop offset="100%" stop-color="#970F23"/>
+    <linearGradient id="ringG" x1="0.2" y1="0.1" x2="0.8" y2="0.9">
+      <stop offset="0%" stop-color="#FF8A99"/>
+      <stop offset="42%" stop-color="#D81F33"/>
+      <stop offset="100%" stop-color="#4F0610"/>
+    </linearGradient>
+    <linearGradient id="spokeG" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0%" stop-color="#FF8A99"/>
+      <stop offset="100%" stop-color="#7A0A18"/>
+    </linearGradient>
+    <radialGradient id="hubG" cx="0.35" cy="0.3" r="0.75">
+      <stop offset="0%" stop-color="#FF8A99"/>
+      <stop offset="100%" stop-color="#4F0610"/>
+    </radialGradient>
+    <linearGradient id="ribbonG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF8A99" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#CC1C2E"/>
+      <stop offset="100%" stop-color="#FF8A99" stop-opacity="0.85"/>
     </linearGradient>
   </defs>
-  <circle cx="40" cy="40" r="38" fill="#F4F5F8"/>
-  <circle cx="40" cy="40" r="38" fill="none" stroke="#CC1C2E" stroke-width="2"/>
-  <path d="M10 42 Q14 30 26 26 L34 24 Q42 22 50 24 L58 26 Q66 30 70 42 L70 48 L10 48 Z" fill="url(#tp2-red)"/>
-  <path d="M22 36 Q26 28 34 26 L50 26 Q58 28 62 36 L62 40 L22 40 Z" fill="#FDF1F3" opacity="0.4"/>
-  <ellipse cx="65" cy="40" rx="2.5" ry="1.5" fill="#FDF1F3" opacity="0.85"/>
-  <circle cx="22" cy="50" r="5.5" fill="#1B2849"/>
-  <circle cx="22" cy="50" r="2" fill="#FDF1F3"/>
-  <circle cx="58" cy="50" r="5.5" fill="#1B2849"/>
-  <circle cx="58" cy="50" r="2" fill="#FDF1F3"/>
-  <path d="M14 60 Q40 55 66 60 L62 65 Q40 60 18 65 Z" fill="url(#tp2-red)"/>
-  <path d="M36 60 L44 59 L42 62 L34 63 Z" fill="#FDF1F3" opacity="0.85"/>
+
+  <path d="M18,30 C12,6 50,2 84,26" fill="none" stroke="url(#ribbonG)" stroke-width="4.5" stroke-linecap="round"/>
+
+  <circle cx="50" cy="56" r="28" fill="none" stroke="url(#ringG)" stroke-width="9"/>
+
+  <path d="M26 54 A24 24 0 0 1 74 54" fill="none" stroke="#FFB0BB" stroke-width="2" opacity="0.55" stroke-linecap="round"/>
+
+  <path d="M50 58 L50 33" stroke="url(#spokeG)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M50 58 L29 75" stroke="url(#spokeG)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M50 58 L71 75" stroke="url(#spokeG)" stroke-width="10" stroke-linecap="round"/>
+
+  <circle cx="50" cy="58" r="11" fill="url(#hubG)"/>
+  <circle cx="50" cy="58" r="5.5" fill="#2D040A"/>
 </svg>
