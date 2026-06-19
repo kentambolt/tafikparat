@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" fill="none">
+  <defs>
+    <linearGradient id="tpf-red" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E66878"/>
+      <stop offset="50%" stop-color="#CC1C2E"/>
+      <stop offset="100%" stop-color="#7A0A1A"/>
+    </linearGradient>
+    <linearGradient id="tpf-blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4B5F95"/>
+      <stop offset="100%" stop-color="#0F1A2E"/>
+    </linearGradient>
+    <linearGradient id="tpf-glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(155,30)">
+    <circle r="38" fill="none" stroke="url(#tpf-red)" stroke-width="10"/>
+    <circle r="11" fill="url(#tpf-red)"/>
+    <rect x="-3.5" y="-32" width="7" height="20" rx="3" fill="url(#tpf-red)"/>
+    <rect x="-4" y="-4" width="8" height="22" rx="3" transform="rotate(-130 0 0)" fill="url(#tpf-red)"/>
+    <rect x="-4" y="-4" width="8" height="22" rx="3" transform="rotate(130 0 0)" fill="url(#tpf-red)"/>
+    <path d="M-20 -30 Q-32 0 -20 30" fill="none" stroke="url(#tpf-glow)" stroke-width="2" opacity="0.55"/>
+  </g>
+
+  <g transform="translate(230,20)">
+    <path d="M14 64
+             Q22 24 56 18
+             L150 14
+             Q200 18 230 38
+             L240 64
+             L14 64 Z"
+          fill="url(#tpf-red)"/>
+    <path d="M40 50
+             Q50 28 70 22
+             L150 20
+             L195 36
+             L210 50
+             L40 50 Z"
+          fill="#FDF1F3" opacity="0.42"/>
+    <ellipse cx="225" cy="50" rx="8" ry="3.5" fill="#FDF1F3" opacity="0.85"/>
+    <path d="M0 60 L240 60" stroke="url(#tpf-red)" stroke-width="2" opacity="0.8"/>
+    <circle cx="55" cy="64" r="14" fill="#1B2849"/>
+    <circle cx="55" cy="64" r="5.5" fill="#FDF1F3"/>
+    <circle cx="195" cy="64" r="14" fill="#1B2849"/>
+    <circle cx="195" cy="64" r="5.5" fill="#FDF1F3"/>
+  </g>
+
+  <g transform="translate(110,118)">
+    <path d="M0 4
+             Q190 -10 380 4
+             L370 32
+             Q190 14 10 32 Z"
+          fill="url(#tpf-red)"/>
+    <polygon points="170,16 215,12 210,26 165,30" fill="#FDF1F3" opacity="0.9"/>
+  </g>
+
+  <text x="300" y="206" text-anchor="middle" fill="url(#tpf-blue)" font-family="Oswald, Arial, sans-serif" font-size="22" font-weight="600" letter-spacing="6">KØRESKOLEN</text>
+
+  <text x="300" y="262" text-anchor="middle" font-family="Oswald, Arial, sans-serif" font-size="58" font-weight="700">
+    <tspan fill="url(#tpf-red)">TRAFIK</tspan><tspan fill="url(#tpf-blue)">PARAT.DK</tspan>
+  </text>
+
+  <line x1="120" y1="278" x2="480" y2="278" stroke="url(#tpf-red)" stroke-width="2"/>
+
+  <text x="300" y="304" text-anchor="middle" fill="url(#tpf-red)" font-family="Oswald, Arial, sans-serif" font-size="16" font-weight="500" letter-spacing="4">CERTIFICERET KØREUNDERVISNING</text>
+</svg>
