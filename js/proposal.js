@@ -21,7 +21,7 @@
       label: 'Forslag 2',
       name: 'Premium',
       desc: 'Rød & navy · automotive',
-      logo: 'assets/logo-2.svg',
+      logo: 'assets/steeringwheel.png',
     },
   };
 
