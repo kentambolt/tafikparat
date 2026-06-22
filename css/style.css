@@ -113,9 +113,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
-html { overflow-x: clip; }
+html { overflow-x: hidden; }
 
 img, svg, video { max-width: 100%; display: block; height: auto; }
 
