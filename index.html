@@ -1,534 +1,715 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trafikparat · Køreskole i Aalborg</title>
-  <meta name="description" content="Køreskole i Aalborg, der sætter eleven i centrum. Maks. 6 elever pr. hold, erfarne kørelærere og tilpasset undervisning — også for elever med stress, PTSD, ADHD, autisme m.fl." />
-  <meta name="theme-color" content="#047857" />
-  <meta property="og:title" content="Trafikparat · Køreskole i Aalborg" />
-  <meta property="og:description" content="Køreskole i Aalborg, der sætter eleven i centrum. Tryg, individuel undervisning på dit tempo." />
-  <meta property="og:type" content="website" />
-  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <span data-i18n-title="meta.tagline" style="display:none"></span>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café Provence – Fransk café & bistro i Aalborg centrum</title>
+<meta name="description" content="Café Provence i hjertet af Aalborg – brunch, frokost og franske klassikere ved Limfjorden. Book bord online eller ring 98 13 51 33.">
+<link rel="canonical" href="https://cafeprovence.dk/">
+<meta property="og:title" content="Café Provence – Fransk café & bistro i Aalborg">
+<meta property="og:description" content="Brunch, frokost og franske klassikere i hjertet af Aalborg. Book bord online.">
+<meta property="og:url" content="https://cafeprovence.dk/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:image" content="https://restaurant-provence.dk/wp-content/uploads/2025/06/RS-forside-1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FAF5EC;
+    --cream-2:#F3EBDC;
+    --ink:#33302A;
+    --ink-soft:#6B655B;
+    --lavender:#8177A8;
+    --lavender-deep:#5F5488;
+    --olive:#77804C;
+    --terracotta:#C2703E;
+    --line:#E4DAC6;
+    --white:#FFFDF9;
+    --shadow:0 18px 40px -18px rgba(51,48,42,.25);
+    --radius:14px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Jost',sans-serif;
+    font-weight:300;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.65;
+    font-size:17px;
+  }
+  h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:600;line-height:1.15}
+  img{max-width:100%;display:block}
+  a{color:var(--lavender-deep)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(250,245,236,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+  .brand svg{height:44px;width:auto}
+  .brand-name{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:700;letter-spacing:.02em}
+  .brand-name em{font-style:italic;font-weight:500;color:var(--lavender-deep)}
+  nav.menu{display:flex;gap:26px;align-items:center}
+  nav.menu a{
+    text-decoration:none;color:var(--ink);font-size:.95rem;font-weight:400;
+    letter-spacing:.06em;text-transform:uppercase;
+    padding:4px 0;border-bottom:2px solid transparent;transition:.2s;
+  }
+  nav.menu a:hover{color:var(--lavender-deep);border-color:var(--lavender)}
+  nav.menu a.btn-nav{
+    color:#fff;background:var(--lavender-deep);padding:10px 24px;
+    border:none;border-radius:999px;text-transform:uppercase;letter-spacing:.08em;
+  }
+  nav.menu a.btn-nav:hover{background:var(--lavender);color:#fff;transform:translateY(-1px)}
+  .btn{
+    display:inline-block;text-decoration:none;cursor:pointer;border:none;
+    font-family:'Jost',sans-serif;font-size:.95rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
+    padding:13px 30px;border-radius:999px;transition:.25s;
+  }
+  .btn-primary{background:var(--lavender-deep);color:#fff}
+  .btn-primary:hover{background:var(--lavender);transform:translateY(-2px)}
+  .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.8)}
+  .btn-ghost:hover{background:rgba(255,255,255,.15)}
+  .btn-nav{padding:9px 22px;font-size:.85rem}
+  .burger{display:none;background:none;border:none;font-size:1.7rem;color:var(--ink);cursor:pointer}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;min-height:86vh;display:flex;align-items:center;
+    background:
+      linear-gradient(rgba(40,34,50,.55),rgba(40,34,50,.55)),
+      url('https://restaurant-provence.dk/wp-content/uploads/2025/06/RS-forside-1.jpg') center/cover no-repeat;
+    color:#fff;text-align:center;
+  }
+  .hero-inner{max-width:760px;margin:0 auto;padding:90px 22px}
+  .hero .kicker{
+    font-size:.9rem;letter-spacing:.35em;text-transform:uppercase;font-weight:400;
+    color:#E7DFF5;margin-bottom:18px;
+  }
+  .hero h1{font-size:clamp(2.6rem,6vw,4.4rem);font-weight:600;margin-bottom:8px}
+  .hero h1 em{font-style:italic;font-weight:500}
+  .hero p{font-size:1.15rem;max-width:560px;margin:18px auto 34px;color:#F2EEE6}
+  .hero .cta{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+  .hero .price-note{margin-top:26px;font-size:1rem;color:#E7DFF5}
+  .hero .price-note strong{color:#fff;font-weight:500}
+
+  /* ---------- Info strip ---------- */
+  .strip{background:var(--lavender-deep);color:#fff}
+  .strip .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:26px 22px;text-align:center}
+  .strip h3{font-size:1.35rem;color:#fff;font-weight:600}
+  .strip p{font-size:.92rem;color:#DDD6F0}
+
+  /* ---------- Sections ---------- */
+  section{padding:84px 0}
+  .sec-head{text-align:center;max-width:640px;margin:0 auto 48px}
+  .sec-head .kicker{
+    color:var(--terracotta);letter-spacing:.3em;text-transform:uppercase;
+    font-size:.8rem;font-weight:500;display:block;margin-bottom:10px;
+  }
+  .sec-head h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:14px}
+  .sec-head p{color:var(--ink-soft)}
+
+  /* ---------- About ---------- */
+  .about{background:var(--cream)}
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .about-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+  .about-img img{height:100%;object-fit:cover;aspect-ratio:4/3}
+  .about h2{font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:18px}
+  .about p{margin-bottom:16px;color:var(--ink-soft)}
+  .about .flourish{color:var(--lavender-deep);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;margin-top:8px}
+
+  /* ---------- Menu tabs ---------- */
+  .menus{background:var(--white);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:48px}
+  .tab{
+    font-family:'Jost',sans-serif;font-size:.9rem;letter-spacing:.06em;text-transform:uppercase;
+    padding:10px 22px;border-radius:999px;border:1.5px solid var(--line);
+    background:transparent;color:var(--ink-soft);cursor:pointer;transition:.2s;font-weight:400;
+  }
+  .tab:hover{border-color:var(--lavender)}
+  .tab.active{background:var(--lavender-deep);border-color:var(--lavender-deep);color:#fff}
+  .panel{display:none;max-width:820px;margin:0 auto}
+  .panel.active{display:block;animation:fade .35s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  .panel .note{
+    text-align:center;color:var(--ink-soft);font-size:.95rem;
+    margin-bottom:34px;font-style:italic;
+  }
+  .mgroup{margin-bottom:44px}
+  .mgroup h3{
+    font-size:1.7rem;color:var(--olive);text-align:center;margin-bottom:6px;
+  }
+  .mgroup .gdesc{text-align:center;color:var(--ink-soft);font-size:.92rem;font-style:italic;max-width:560px;margin:0 auto 24px}
+  .dish{
+    display:flex;justify-content:space-between;gap:18px;align-items:baseline;
+    padding:14px 4px;border-bottom:1px dashed var(--line);
+  }
+  .dish:last-child{border-bottom:none}
+  .dish .d-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:600}
+  .dish .d-desc{color:var(--ink-soft);font-size:.92rem;margin-top:2px}
+  .dish .d-fr{color:var(--lavender-deep);font-style:italic;font-size:.88rem;font-family:'Cormorant Garamond',serif}
+  .dish .d-price{white-space:nowrap;font-weight:500;color:var(--terracotta);font-size:1.05rem}
+  .price-banner{
+    text-align:center;background:var(--cream-2);border:1px solid var(--line);
+    border-radius:var(--radius);padding:26px;margin:10px 0 30px;
+  }
+  .price-banner .big{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:700;color:var(--lavender-deep)}
+  .price-banner p{color:var(--ink-soft);font-size:.95rem}
+  .fineprint{text-align:center;color:var(--ink-soft);font-size:.85rem;margin-top:18px;font-style:italic}
+
+  /* Wine accordions */
+  details.wine{border:1px solid var(--line);border-radius:12px;margin-bottom:12px;background:var(--cream);overflow:hidden}
+  details.wine summary{
+    cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;
+    padding:16px 22px;font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--ink);
+  }
+  details.wine summary::-webkit-details-marker{display:none}
+  details.wine summary::after{content:'+';font-family:'Jost',sans-serif;color:var(--lavender-deep);font-size:1.4rem;font-weight:300}
+  details.wine[open] summary::after{content:'–'}
+  details.wine .wbody{padding:0 22px 18px}
+  .wine h4{color:var(--olive);font-size:1.15rem;margin:16px 0 4px;letter-spacing:.03em}
+  .witem{display:flex;justify-content:space-between;gap:14px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:.97rem}
+  .witem:last-child{border-bottom:none}
+  .witem .wn strong{font-weight:500}
+  .witem .wn span{color:var(--ink-soft);font-size:.87rem;display:block}
+  .witem .wp{white-space:nowrap;color:var(--terracotta);font-weight:500}
+
+  /* ---------- Booking ---------- */
+  .booking{
+    background:
+      linear-gradient(rgba(50,42,66,.78),rgba(50,42,66,.78)),
+      url('https://restaurant-provence.dk/wp-content/uploads/2024/11/iStock-500466008-min-scaled-2.jpg') center/cover no-repeat;
+    color:#fff;text-align:center;
+  }
+  .booking h2{font-size:clamp(2rem,4.5vw,3rem);color:#fff;margin-bottom:14px}
+  .booking p{max-width:600px;margin:0 auto 12px;color:#EDE8F7}
+  .booking .widget-box{
+    max-width:680px;margin:34px auto;background:rgba(255,253,249,.97);color:var(--ink);
+    border-radius:var(--radius);padding:40px 30px;box-shadow:var(--shadow);
+  }
+  .booking .widget-box h3{font-size:1.6rem;margin-bottom:10px}
+  .booking .widget-box p{color:var(--ink-soft);margin-bottom:20px}
+  .booking small{display:block;margin-top:22px;color:#CFC7E4;font-style:italic;max-width:560px;margin-left:auto;margin-right:auto}
+
+  /* ---------- Contact ---------- */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .c-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:36px;box-shadow:var(--shadow)}
+  .c-card h3{font-size:1.6rem;margin-bottom:18px}
+  .c-row{display:flex;gap:14px;margin-bottom:16px;align-items:flex-start}
+  .c-row .ic{color:var(--lavender-deep);font-size:1.1rem;line-height:1.6}
+  .c-row a{text-decoration:none}
+  .c-row a:hover{text-decoration:underline}
+  .hours{margin-top:26px;border-top:1px solid var(--line);padding-top:20px}
+  .hours h4{font-size:1.2rem;margin-bottom:10px;color:var(--olive)}
+  .hours table{width:100%;font-size:.97rem;border-collapse:collapse}
+  .hours td{padding:5px 0;color:var(--ink-soft)}
+  .hours td:last-child{text-align:right;color:var(--ink)}
+  .map{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);height:100%;min-height:420px}
+  .map iframe{width:100%;height:100%;min-height:420px;border:0}
+
+  /* ---------- Footer ---------- */
+  footer{background:#332F3E;color:#CFC9DE;padding:56px 0 30px}
+  .f-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:44px;margin-bottom:36px}
+  footer h4{color:#fff;font-size:1.35rem;margin-bottom:14px}
+  footer a{color:#CFC9DE;text-decoration:none}
+  footer a:hover{color:#fff;text-decoration:underline}
+  footer ul{list-style:none}
+  footer li{margin-bottom:8px}
+  .f-brand svg{height:52px;margin-bottom:12px}
+  .f-bottom{border-top:1px solid rgba(255,255,255,.14);padding-top:22px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.88rem;color:#9B94B5}
+
+  /* ---------- Responsive ---------- */
+  @media(max-width:900px){
+    .about-grid,.contact-grid,.f-grid{grid-template-columns:1fr}
+    .strip .wrap{grid-template-columns:1fr;gap:18px}
+    nav.menu{
+      position:fixed;inset:72px 0 auto 0;background:var(--cream);
+      flex-direction:column;padding:26px;gap:18px;border-bottom:1px solid var(--line);
+      transform:translateY(-130%);transition:.3s;box-shadow:var(--shadow);
+    }
+    nav.menu.open{transform:none}
+    .burger{display:block}
+    .map{min-height:320px}
+  }
+</style>
 </head>
 <body>
 
-  <!-- ============= NAV ============= -->
-  <header class="nav">
-    <div class="container nav__inner">
-      <a href="index.html" class="nav__brand" aria-label="Trafikparat">
-        <img src="assets/logo.svg" alt="" width="36" height="36" data-logo />
-        <span>Trafikparat</span>
-      </a>
+<!-- ======================= HEADER ======================= -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Café Provence – forside">
+      <!-- Nyt logo: lavendel-kvist -->
+      <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M30 52 C30 38 30 24 30 10" stroke="#77804C" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M30 44 C22 42 18 36 17 30 C24 32 28 37 30 44Z" fill="#8177A8"/>
+        <path d="M30 44 C38 42 42 36 43 30 C36 32 32 37 30 44Z" fill="#8177A8"/>
+        <path d="M30 32 C23 30 20 25 19 20 C25 22 28 26 30 32Z" fill="#9A8FBF"/>
+        <path d="M30 32 C37 30 40 25 41 20 C35 22 32 26 30 32Z" fill="#9A8FBF"/>
+        <ellipse cx="30" cy="12" rx="4.5" ry="6.5" fill="#5F5488"/>
+      </svg>
+      <span class="brand-name">Café <em>Provence</em></span>
+    </a>
+    <button class="burger" aria-label="Menu" onclick="document.querySelector('nav.menu').classList.toggle('open')">☰</button>
+    <nav class="menu">
+      <a href="#om">Om os</a>
+      <a href="#menukort">Menukort</a>
+      <a href="#vinkort">Vinkort</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="btn btn-primary btn-nav" href="#book">Book bord</a>
+    </nav>
+  </div>
+</header>
 
-      <nav class="nav__menu" aria-label="Hovedmenu">
-        <a href="index.html" class="nav__link is-active" data-i18n="nav.home">Forside</a>
-        <a href="holdstart.html" class="nav__link" data-i18n="nav.courses">Holdstart</a>
-        <a href="saerlige-behov.html" class="nav__link" data-i18n="nav.support">Særlige behov</a>
-        <a href="om-os.html" class="nav__link" data-i18n="nav.about">Om os</a>
-        <a href="kontakt.html" class="nav__link" data-i18n="nav.contact">Kontakt</a>
-        <a href="kontakt.html" class="nav__link nav__link--cta" data-i18n="nav.signUp">Tilmeld dig</a>
-      </nav>
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="kicker">Fransk café &amp; bistro · Aalborg</div>
+    <h1>Café <em>Provence</em></h1>
+    <p>En lille oase af fransk charme ved Limfjorden – hvor interiør, musik og gastronomi smelter sammen. Fra morgenens café au lait til aftenens tournedos.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#book">Book dit bord</a>
+      <a class="btn btn-ghost" href="#menukort">Se menukort</a>
+    </div>
+    <div class="price-note">Månedens 3-retters menu <strong>kun 295,-</strong> · Brunch <strong>kun 169,-</strong></div>
+  </div>
+</section>
 
-      <div class="nav__actions">
-        <div class="proposal">
-          <button type="button" class="proposal__toggle" data-proposal-toggle aria-haspopup="true" aria-expanded="false" title="Skift designforslag">
-            <svg class="proposal__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M12 3a9 9 0 010 18" fill="currentColor"/>
-            </svg>
-            <span class="proposal__current" data-proposal-current>Forslag 2</span>
-            <svg class="proposal__caret" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <div class="proposal__menu" data-proposal-menu role="menu"></div>
-        </div>
+<!-- ======================= INFO STRIP ======================= -->
+<div class="strip">
+  <div class="wrap">
+    <div><h3>Brunch</h3><p>Man–fre 11–13 · Lør–søn 10–13</p></div>
+    <div><h3>Café &amp; frokost</h3><p>Caféretter serveres dagligt 12–16</p></div>
+    <div><h3>Aften</h3><p>À la carte alle aftener fra kl. 17</p></div>
+  </div>
+</div>
 
-        <div class="lang">
-          <button type="button" class="lang__toggle" data-lang-toggle aria-haspopup="true" aria-expanded="false">
-            <span class="lang__flag" data-lang-flag>🇩🇰</span>
-            <span data-lang-current>DA</span>
-            <svg class="lang__caret" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <div class="lang__menu" data-lang-menu role="menu"></div>
-        </div>
+<!-- ======================= OM OS ======================= -->
+<section class="about" id="om">
+  <div class="wrap about-grid">
+    <div class="about-img">
+      <img src="https://restaurant-provence.dk/wp-content/uploads/2025/06/maned-menu-1.jpg" alt="Fransk ret med sauce, kartofler og grøntsager hos Café Provence" loading="lazy">
+    </div>
+    <div>
+      <span class="kicker" style="color:var(--terracotta);letter-spacing:.3em;text-transform:uppercase;font-size:.8rem;font-weight:500">Bienvenue</span>
+      <h2>Et stykke Sydfrankrig i hjertet af Aalborg</h2>
+      <p>Som navnet antyder, har vi ladet os inspirere af de stolte franske traditioner – i interiøret, musikken og gastronomien. Stemningen og atmosfæren er altid i højsædet hos os og understreges af smukke brugsting, franske specialiteter og kunst på væggene.</p>
+      <p>Vores menukort er en kulinarisk rejse med lækre fiskeretter, skaldyr og kødretter – og vores vinkort, med hovedvægt på franske vine i alle prisklasser, er et kapitel for sig. Uanset hvilken vin du vælger, garanterer vi for kvaliteten.</p>
+      <p class="flourish">Café Provence – Ved Stranden 11, lige ved Limfjorden.</p>
+    </div>
+  </div>
+</section>
 
-        <a href="kontakt.html" class="btn btn--primary btn--sm" data-i18n="nav.signUp">Tilmeld dig</a>
+<!-- ======================= MENUKORT ======================= -->
+<section class="menus" id="menukort">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">La carte</span>
+      <h2>Vores menukort</h2>
+      <p>Fra afslappet brunch og caféklassikere til franske aftenretter og månedens menu.</p>
+    </div>
 
-        <button type="button" class="nav__burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">
-          <span></span><span></span><span></span>
-        </button>
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-panel="p-brunch">Brunch</button>
+      <button class="tab" data-panel="p-cafe">Café kort</button>
+      <button class="tab" data-panel="p-alacarte">À la carte</button>
+      <button class="tab" data-panel="p-provence">Provence menu</button>
+      <button class="tab" data-panel="p-maaned">Månedens menu</button>
+    </div>
+
+    <!-- Brunch -->
+    <div class="panel active" id="p-brunch">
+      <p class="note">Mandag–fredag kl. 11–13 · Lørdag–søndag kl. 10–13</p>
+      <div class="price-banner">
+        <div class="big">Brunch – kun 169,-</div>
+        <p>Æg, bacon, brunchpølse, røget laks, skyr med müesli, hønsesalat, pålæg, ost med frugt og pandekage med sirup. <em>(Eksklusiv drikkevarer)</em></p>
       </div>
     </div>
-  </header>
 
-  <!-- ============= HERO ============= -->
-  <section class="hero">
-    <div class="hero__bg">
-      <video class="hero__video" autoplay loop muted playsinline poster="">
-        <source src="https://trafikparat.dk/onewebmedia/Trafik%20-%206454.mp4" type="video/mp4" />
-      </video>
-      <div class="hero__overlay"></div>
-    </div>
-
-    <div class="container hero__inner">
-      <div class="hero__copy" data-reveal>
-        <span class="hero__eyebrow">
-          <span class="dot"></span>
-          <span data-i18n="hero.eyebrow">Køreskole i Aalborg · Etableret køreskole</span>
-        </span>
-
-        <h1 class="hero__title">
-          <span data-i18n="hero.title1">Få dit kørekort hos en køreskole, der</span>
-          <span class="highlight" data-i18n="hero.titleHL">ser dig</span><span data-i18n="hero.title2">.</span>
-        </h1>
-
-        <p class="hero__lead" data-i18n="hero.lead">
-          Hos Trafikparat står du som elev i centrum. Vi tilpasser undervisningen til din læringsstil og dit tempo — i små hold på maks. 6 elever, med erfarne kørelærere og fokus på psykologisk tryghed bag rattet.
-        </p>
-
-        <div class="hero__cta">
-          <a href="holdstart.html" class="btn btn--primary btn--large">
-            <span data-i18n="hero.ctaPrimary">Tilmeld dig nu</span>
-            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-          <a href="#features" class="btn btn--secondary btn--large" data-i18n="hero.ctaSecondary">Se holdstart</a>
-        </div>
-
-        <div class="hero__stats">
-          <div class="hero__stat">
-            <strong>6</strong>
-            <span data-i18n="hero.stat1">Maks. elever pr. hold</span>
-          </div>
-          <div class="hero__stat">
-            <strong data-i18n="hero.statValueTheory">Ubegrænset</strong>
-            <span data-i18n="hero.stat2">Teorilektioner</span>
-          </div>
-          <div class="hero__stat">
-            <strong data-i18n="hero.statValueIndividual">1-til-1</strong>
-            <span data-i18n="hero.stat3">Tilpasset undervisning</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero__visual" data-reveal>
-        <video autoplay loop muted playsinline>
-          <source src="https://trafikparat.dk/onewebmedia/pexels-gustavo-fring-5391318.mp4" type="video/mp4" />
-        </video>
-        <div class="hero__visual-tag">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M5 11l1.5-4.5A2 2 0 018.4 5h7.2a2 2 0 011.9 1.5L19 11M5 11h14M5 11v6h2v2h2v-2h6v2h2v-2h2v-6" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-            <circle cx="8" cy="14.5" r="1" fill="currentColor"/>
-            <circle cx="16" cy="14.5" r="1" fill="currentColor"/>
-          </svg>
-          <span data-i18n="meta.tagline">Køreskole i Aalborg</span>
-        </div>
-        <div class="hero__visual-badge">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <circle cx="12" cy="12" r="11" fill="#D1FAE5"/>
-            <path d="M7 12l3 3 7-7" stroke="#047857" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          <div>
-            <strong data-i18n="hero.badgeTitle">Tryg læring</strong>
-            <span data-i18n="hero.badgeText">Undervisning tilpasset hver enkelt elev</span>
-          </div>
-        </div>
+    <!-- Café kort -->
+    <div class="panel" id="p-cafe">
+      <p class="note">Caféretter – serveres dagligt kl. 12–16</p>
+      <div class="mgroup">
+        <div class="dish"><div><div class="d-name">Frokostplatte</div><div class="d-desc">F.eks. med sild, laks, rejer, hønsesalat, ost og en lun ting</div></div><div class="d-price">159,-</div></div>
+        <div class="dish"><div><div class="d-name">Pariserbøf</div><div class="d-desc">Med rødbeder, løg, kapers, revet peberrod og rå æggeblomme</div></div><div class="d-price">99,-</div></div>
+        <div class="dish"><div><div class="d-name">Wienerschnitzel</div><div class="d-desc">Med brasede kartofler, smørsovs, ærter og wienerdreng</div></div><div class="d-price">269,-</div></div>
+        <div class="dish"><div><div class="d-name">Stjerneskud</div><div class="d-desc">Med pandestegt fiskefilet, rejer, asparges, kaviar og røget laks</div></div><div class="d-price">199,-</div></div>
+        <div class="dish"><div><div class="d-name">Moules Frites</div><div class="d-desc">Hvidvinsdampede blåmuslinger med pommes frites og hvidløgsmayonnaise</div></div><div class="d-price">199,-</div></div>
+        <div class="dish"><div><div class="d-name">Omelet</div><div class="d-desc">Med bacon, kartofler og løg</div></div><div class="d-price">129,-</div></div>
+        <div class="dish"><div><div class="d-name">Croque Madame</div><div class="d-desc">Toastbrød med skinke, ost, sennep og spejlæg</div></div><div class="d-price">119,-</div></div>
+        <div class="dish"><div><div class="d-name">Café burger</div><div class="d-desc">Serveret med oksekød fra Himmerland, frisk salat, hjemmelavet dressing og sprøde pommes frites</div></div><div class="d-price">169,-</div></div>
+        <div class="dish"><div><div class="d-name">Pasta Carbonara</div><div class="d-desc">Frisk pasta i flødesauce med bacon</div></div><div class="d-price">119,-</div></div>
+        <div class="dish"><div><div class="d-name">Pasta med tigerrejer</div><div class="d-desc">Frisk pasta i hummersauce med tigerrejer</div></div><div class="d-price">119,-</div></div>
+        <div class="dish"><div><div class="d-name">Pasta med kylling</div><div class="d-desc">Frisk pasta med stykker af kylling vendt i pesto</div></div><div class="d-price">119,-</div></div>
       </div>
     </div>
-  </section>
 
-  <!-- ============= BRAND EMBLEM (Forslag 2 only) ============= -->
-  <section class="brand-emblem" aria-label="Trafikparat — Certificeret køreundervisning">
-    <div class="container">
-      <img src="assets/originallogo.png" alt="Køreskolen Trafikparat.dk — Certificeret køreundervisning" width="1536" height="1024" />
-    </div>
-  </section>
-
-  <!-- ============= SCENES (visual storyboard) ============= -->
-  <section class="section section--tight">
-    <div class="container">
-      <header class="section-header" data-reveal>
-        <span class="eyebrow" data-i18n="scenes.eyebrow">Hverdagen hos Trafikparat</span>
-        <h2 class="section-title" data-i18n="scenes.title">Undervisning, kørsel og fællesskab</h2>
-        <p class="section-lead" data-i18n="scenes.lead">Et glimt af, hvordan vi arbejder — på vejen, på øvebanen og bag rattet sammen med vores elever.</p>
-      </header>
-
-      <div class="scenes">
-        <article class="scene-card" data-reveal>
-          <video autoplay loop muted playsinline preload="metadata">
-            <source src="https://trafikparat.dk/onewebmedia/pexels-gustavo-fring-5391318.mp4" type="video/mp4" />
-          </video>
-          <div class="scene-card__caption">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 14a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M6 21v-1a6 6 0 0112 0v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-            <strong data-i18n="scenes.tag1">Tryg undervisning</strong>
-          </div>
-        </article>
-
-        <article class="scene-card" data-reveal>
-          <video autoplay loop muted playsinline preload="metadata">
-            <source src="https://trafikparat.dk/onewebmedia/Trafik%20-%206454.mp4" type="video/mp4" />
-          </video>
-          <div class="scene-card__caption">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M5 11l1.5-4.5A2 2 0 018.4 5h7.2a2 2 0 011.9 1.5L19 11M5 11h14M5 11v6h2v2h2v-2h6v2h2v-2h2v-6" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-            </svg>
-            <strong data-i18n="scenes.tag2">Praktisk kørsel</strong>
-          </div>
-        </article>
-
-        <article class="scene-card" data-reveal>
-          <video autoplay loop muted playsinline preload="metadata">
-            <source src="https://trafikparat.dk/onewebmedia/production%20ID_5198919.mp4" type="video/mp4" />
-          </video>
-          <div class="scene-card__caption">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <circle cx="5.5" cy="16.5" r="3.5" stroke="currentColor" stroke-width="1.8"/>
-              <circle cx="18.5" cy="16.5" r="3.5" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M5.5 16.5L11 10h3l2-3h3M11 10l2 6.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <strong data-i18n="scenes.tag3">Kategori A & B</strong>
-          </div>
-        </article>
-
-        <article class="scene-card" data-reveal>
-          <video autoplay loop muted playsinline preload="metadata">
-            <source src="https://trafikparat.dk/onewebmedia/pexels-kindel-media-6774593.mp4" type="video/mp4" />
-          </video>
-          <div class="scene-card__caption">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M22 10v6M2 10l10-5 10 5-10 5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-              <path d="M6 12v5c0 1 4 3 6 3s6-2 6-3v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <strong data-i18n="scenes.tag4">Erfarne kørelærere</strong>
-          </div>
-        </article>
+    <!-- À la carte -->
+    <div class="panel" id="p-alacarte">
+      <p class="note">Aftenmenu – serveres alle aftener fra kl. 17</p>
+      <div class="mgroup">
+        <h3>Forretter</h3>
+        <div class="dish"><div><div class="d-name">½ hummer naturel</div><div class="d-desc">Serveret med 2 dressinger og citron</div><div class="d-fr">½ Homard nature</div></div><div class="d-price">149,-</div></div>
+        <div class="dish"><div><div class="d-name">Fiskesuppe</div><div class="d-desc">Med stykker af fisk og skaldyr</div><div class="d-fr">Soupe de poisson</div></div><div class="d-price">119,-</div></div>
+        <div class="dish"><div><div class="d-name">Hummersuppe</div><div class="d-desc">Tilsmagt med cognac</div><div class="d-fr">Soupe de homard</div></div><div class="d-price">129,-</div></div>
+        <div class="dish"><div><div class="d-name">Blåmuslinger</div><div class="d-desc">Dampet i fløde og hvidvin</div><div class="d-fr">Moules Marinières</div></div><div class="d-price">135,-</div></div>
+        <div class="dish"><div><div class="d-name">Østers</div><div class="d-desc">Serveret med citron og rødløgseddike – pr. stk.</div><div class="d-fr">Huîtres de Bretagne</div></div><div class="d-price">45,-</div></div>
+        <div class="dish"><div><div class="d-name">Tigerrejer</div><div class="d-desc">Pankopaneret på blandet salat</div><div class="d-fr">Crevettes géantes</div></div><div class="d-price">129,-</div></div>
+        <div class="dish"><div><div class="d-name">Røget laks</div><div class="d-desc">Med spinat à la creme</div><div class="d-fr">Saumon fumé avec épinards à la crème</div></div><div class="d-price">125,-</div></div>
+        <div class="dish"><div><div class="d-name">Håndpillede rejer</div><div class="d-desc">På sprød crouton og citronmayo</div></div><div class="d-price">129,-</div></div>
+        <div class="dish"><div><div class="d-name">Carpaccio</div><div class="d-desc">Af laks med revet parmesan, pesto og salat</div></div><div class="d-price">139,-</div></div>
+        <div class="dish"><div><div class="d-name">Snegle i hvidløg</div><div class="d-fr">Escargots à l'ail</div></div><div class="d-price">119,-</div></div>
+      </div>
+      <div class="mgroup">
+        <h3>Hovedretter</h3>
+        <div class="dish"><div><div class="d-name">Laks</div><div class="d-desc">Bagt, serveret med spinatsauce, kartofler og dagens friske grøntsager</div><div class="d-fr">Filet de saumon cuit au four</div></div><div class="d-price">229,-</div></div>
+        <div class="dish"><div><div class="d-name">1/1 hummer</div><div class="d-desc">Gratineret i hummersauce</div><div class="d-fr">Homard grillé</div></div><div class="d-price">259,-</div></div>
+        <div class="dish"><div><div class="d-name">Skaldyrsfad</div><div class="d-desc">½ hummer, krebs, jomfruhummerhaler, grønlandske rejer, tigerrejer, østers, blåmuslinger og krabbeklør. Serveres med citron, 4 slags dressinger, brød og smør</div><div class="d-fr">Plateau de fruits de mer – min. 2 couverter</div></div><div class="d-price">529,-</div></div>
+        <div class="dish"><div><div class="d-name">Tournedos bearnaise</div><div class="d-desc">200 g oksemørbrad</div><div class="d-fr">Tournedos, sauce béarnaise</div></div><div class="d-price">299,-</div></div>
+        <div class="dish"><div><div class="d-name">Tournedos Rossini</div><div class="d-desc">200 g oksemørbrad med trøffel og foie gras</div><div class="d-fr">Tournedos Rossini</div></div><div class="d-price">349,-</div></div>
+        <div class="dish"><div><div class="d-name">Hvidløgsbøf</div><div class="d-desc">200 g oksemørbrad, hvidløg, salat og hvidløgssmør</div><div class="d-fr">Bœuf avec ail</div></div><div class="d-price">329,-</div></div>
+        <div class="dish"><div><div class="d-name">Confiteret andelår</div><div class="d-desc">Serveres med rødvinssauce</div><div class="d-fr">Confit de canard</div></div><div class="d-price">259,-</div></div>
+        <div class="dish"><div><div class="d-name">Lammekrone</div><div class="d-desc">Serveres med glace</div><div class="d-fr">Carré d'agneau</div></div><div class="d-price">289,-</div></div>
+        <div class="dish"><div><div class="d-name">Wienerschnitzel</div><div class="d-desc">Af kalv</div></div><div class="d-price">269,-</div></div>
+      </div>
+      <div class="mgroup">
+        <h3>Desserter</h3>
+        <div class="dish"><div><div class="d-name">Ostetallerken</div><div class="d-desc">Med 4 forskellige slags udvalgte oste</div><div class="d-fr">Assiette de fromages</div></div><div class="d-price">120,-</div></div>
+        <div class="dish"><div><div class="d-name">Pandekager</div><div class="d-desc">Med is, orangesauce og mandler</div><div class="d-fr">Crêpes Suzette</div></div><div class="d-price">109,-</div></div>
+        <div class="dish"><div><div class="d-name">Nougattærte</div><div class="d-desc">Serveret med frugtcoulis og is</div><div class="d-fr">Tarte au nougat</div></div><div class="d-price">109,-</div></div>
+        <div class="dish"><div><div class="d-name">Crème brûlée</div><div class="d-desc">Glaseret vaniljecreme med frisk tahitivanilje</div></div><div class="d-price">109,-</div></div>
+        <div class="dish"><div><div class="d-name">Gammeldags æblekage</div><div class="d-desc">Med pisket fløde og makroner</div></div><div class="d-price">99,-</div></div>
+        <div class="dish"><div><div class="d-name">Coupe Danois</div><div class="d-desc">Vaniljeis med chokoladesauce</div></div><div class="d-price">89,-</div></div>
+      </div>
+      <div class="mgroup">
+        <h3>Kaffe &amp; the</h3>
+        <div class="dish"><div><div class="d-name">Espresso</div><div class="d-desc">Brygget på italienske Lavazzas mørkbrændte bønner</div></div><div class="d-price">38,-</div></div>
+        <div class="dish"><div><div class="d-name">Cappuccino</div><div class="d-desc">Espresso med varmt og cremet mælkeskum</div></div><div class="d-price">39,-</div></div>
+        <div class="dish"><div><div class="d-name">Café latte</div><div class="d-desc">Espresso med varm opskummet mælk</div></div><div class="d-price">42,-</div></div>
+        <div class="dish"><div><div class="d-name">Café creme</div><div class="d-desc">Kaffe brygget på lysbrændte bønner – cremet på toppen og fuld af aroma</div></div><div class="d-price">36,-</div></div>
+        <div class="dish"><div><div class="d-name">Café irlandais</div><div class="d-desc">Irsk kaffe – kaffe med whisky, pisket fløde og sukker</div></div><div class="d-price">79,-</div></div>
+        <div class="dish"><div><div class="d-name">Café français</div><div class="d-desc">Fransk kaffe – kaffe med Cointreau og pisket fløde</div></div><div class="d-price">79,-</div></div>
+        <div class="dish"><div><div class="d-name">Café chartreuse</div><div class="d-desc">Kaffe med Chartreuse Verte og pisket fløde</div></div><div class="d-price">79,-</div></div>
+        <div class="dish"><div><div class="d-name">The</div></div><div class="d-price">36,-</div></div>
+        <div class="dish"><div><div class="d-name">Varm chokolade</div><div class="d-desc">Med flødeskum</div></div><div class="d-price">42,-</div></div>
       </div>
     </div>
-  </section>
 
-  <!-- ============= FEATURES ============= -->
-  <section class="section" id="features">
-    <div class="container">
-      <header class="section-header" data-reveal>
-        <span class="eyebrow" data-i18n="features.eyebrow">Hvorfor Trafikparat</span>
-        <h2 class="section-title" data-i18n="features.title">En køreskole bygget på tryghed og kvalitet</h2>
-        <p class="section-lead" data-i18n="features.lead">Vi tror på, at den bedste vej til et kørekort starter med tillid, tålmodighed og tilpasset undervisning.</p>
-      </header>
-
-      <div class="features">
-        <article class="feature" data-reveal>
-          <div class="feature__icon">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 14a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M6 21v-1a6 6 0 0112 0v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M17 6l2 2-2 2M21 8h-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3 class="feature__title" data-i18n="features.f1Title">Lærere i verdensklasse</h3>
-          <p class="feature__text" data-i18n="features.f1Text">Erfarne, certificerede kørelærere med fokus på den enkelte elevs behov og forudsætninger.</p>
-        </article>
-
-        <article class="feature" data-reveal>
-          <div class="feature__icon">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <circle cx="7" cy="8" r="3" stroke="currentColor" stroke-width="1.8"/>
-              <circle cx="17" cy="8" r="3" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M2 19v-1a4 4 0 014-4h2a4 4 0 014 4v1M14 19v-1a4 4 0 014-4h2a4 4 0 014 4v1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3 class="feature__title" data-i18n="features.f2Title">Maks. 6 elever pr. hold</h3>
-          <p class="feature__text" data-i18n="features.f2Text">Små hold giver mere tid til dig, færre forstyrrelser og en bedre forudsætning for at lære.</p>
-        </article>
-
-        <article class="feature" data-reveal>
-          <div class="feature__icon">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M4 5a2 2 0 012-2h8l6 6v10a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-              <path d="M14 3v6h6" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-              <path d="M8 13l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3 class="feature__title" data-i18n="features.f3Title">Ubegrænset teori</h3>
-          <p class="feature__text" data-i18n="features.f3Text">Du får adgang til teorilektioner, online prøver og undervisningsmaterialer pr. lovpakke uden begrænsninger.</p>
-        </article>
-
-        <article class="feature" data-reveal>
-          <div class="feature__icon">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M3 17l4-4 4 4 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M14 6h7v7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3 class="feature__title" data-i18n="features.f4Title">Praksisorienteret</h3>
-          <p class="feature__text" data-i18n="features.f4Text">Masser af øvelse på vejen i et sikkert og kontrolleret miljø, så du føler dig klar til prøven.</p>
-        </article>
-
-        <article class="feature" data-reveal>
-          <div class="feature__icon">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3 class="feature__title" data-i18n="features.f5Title">Fællesskab</h3>
-          <p class="feature__text" data-i18n="features.f5Text">Vi hjælper og støtter hinanden. Du lærer i et trygt miljø, hvor det er okay at stille spørgsmål.</p>
-        </article>
-
-        <article class="feature" data-reveal>
-          <div class="feature__icon">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <rect x="3" y="5" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M8 3v4M16 3v4M3 11h18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3 class="feature__title" data-i18n="features.f6Title">Fleksibel tidsplan</h3>
-          <p class="feature__text" data-i18n="features.f6Text">Vi tilrettelægger din undervisning, så den passer ind i din hverdag og dit tempo.</p>
-        </article>
+    <!-- Provence menu -->
+    <div class="panel" id="p-provence">
+      <div class="price-banner">
+        <div class="big">2 retter fra 289,- · 3 retter fra 299,-</div>
+        <p>Alle dage – en klassisk fransk 2- eller 3-retters menu af sæsonens bedste råvarer</p>
       </div>
-    </div>
-  </section>
-
-  <!-- ============= PILLARS / METHODOLOGY ============= -->
-  <section class="section section--tinted">
-    <div class="container">
-      <header class="section-header" data-reveal>
-        <span class="eyebrow" data-i18n="pillars.eyebrow">Vores tilgang</span>
-        <h2 class="section-title" data-i18n="pillars.title">Tre principper, der ændrer, hvordan du kører</h2>
-        <p class="section-lead" data-i18n="pillars.lead">Vi underviser ikke bare i køreteknik — vi underviser i den mentale side af at færdes i trafikken.</p>
-      </header>
-
-      <div class="pillars">
-        <article class="pillar" data-reveal>
-          <div class="pillar__number">01</div>
-          <h3 class="pillar__title" data-i18n="pillars.p1Title">Forbedret fokus</h3>
-          <p class="pillar__text" data-i18n="pillars.p1Text">Fokus er en filtrering af indtryk. Vi træner dig i at udelukke det støj, der forstyrrer din intention, så du holder hovedet på den vigtige opgave: at køre sikkert.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <div class="pillar__number">02</div>
-          <h3 class="pillar__title" data-i18n="pillars.p2Title">Mindre stress og angst</h3>
-          <p class="pillar__text" data-i18n="pillars.p2Text">Stress er en naturlig biologisk mekanisme — men i trafikken skal den styres. Vi giver dig værktøjer til at håndtere presset bag rattet med ro.</p>
-        </article>
-        <article class="pillar" data-reveal>
-          <div class="pillar__number">03</div>
-          <h3 class="pillar__title" data-i18n="pillars.p3Title">Øget bevidsthed</h3>
-          <p class="pillar__text" data-i18n="pillars.p3Text">Din kørelærer optimerer din evne til at opfatte, forstå og være opmærksom på omgivelserne, så du ikke bare reagerer — men forudser.</p>
-        </article>
+      <div class="mgroup">
+        <h3>Forretter</h3>
+        <p class="gdesc">En klassisk start på fransk manér – serveret med hjemmebagt brød og smør</p>
+        <div class="dish"><div><div class="d-name">Fiskesuppe</div></div></div>
+        <div class="dish"><div><div class="d-name">Salat med rejer</div><div class="d-desc">Med chilimayo</div></div></div>
+        <div class="dish"><div><div class="d-name">2 stk. østers</div><div class="d-desc">Naturel med rødløgsvinaigrette, citron og tabasco</div></div></div>
+        <div class="dish"><div><div class="d-name">Røget laks</div><div class="d-desc">Med spinat à la creme</div></div></div>
+        <div class="dish"><div><div class="d-name">Blåmuslinger</div><div class="d-desc">Hvidvinsdampede</div></div></div>
+        <div class="dish"><div><div class="d-name">Carpaccio</div><div class="d-desc">Af oksekød, serveres med parmesan, pesto og marineret salat</div></div><div class="d-price">+10,-</div></div>
+        <div class="dish"><div><div class="d-name">Snegle</div><div class="d-desc">I hvidløgssmør</div></div></div>
       </div>
+      <div class="mgroup">
+        <h3>Hovedretter</h3>
+        <p class="gdesc">Udvalgte franske specialiteter med masser af smag og kærlighed til råvarerne</p>
+        <div class="dish"><div><div class="d-name">Pebersteak</div><div class="d-desc">Af kalvefilet med mild pebersauce og små kartofler</div></div></div>
+        <div class="dish"><div><div class="d-name">Laks</div><div class="d-desc">Ovnbagt, med pasta</div></div></div>
+        <div class="dish"><div><div class="d-name">Perlehønebryst</div><div class="d-desc">Med svampe à la creme og små krydderkartofler</div></div></div>
+        <div class="dish"><div><div class="d-name">Confit de canard</div><div class="d-desc">Med rødvinssauce og små krydderkartofler</div></div><div class="d-price">+10,-</div></div>
+      </div>
+      <div class="mgroup">
+        <h3>Desserter</h3>
+        <p class="gdesc">Afslut med sødt, cremet eller friskt – i ægte fransk stil</p>
+        <div class="dish"><div><div class="d-name">Fransk kaffe</div><div class="d-desc">Med pisket fløde</div></div><div class="d-price">+10,-</div></div>
+        <div class="dish"><div><div class="d-name">Chokolademousse</div><div class="d-desc">Med frugtcoulis</div></div></div>
+        <div class="dish"><div><div class="d-name">Nougattærte</div><div class="d-desc">Serveret med frugtcoulis og is</div></div></div>
+        <div class="dish"><div><div class="d-name">Ost</div><div class="d-desc">Med oliven og sprødt</div></div></div>
+        <div class="dish"><div><div class="d-name">Crème brûlée</div><div class="d-desc">Glaseret vaniljecreme med frisk tahitivanilje</div></div></div>
+        <div class="dish"><div><div class="d-name">Pandekager</div><div class="d-desc">Med is</div></div></div>
+        <div class="dish"><div><div class="d-name">Gammeldags æblekage</div><div class="d-desc">Med pisket fløde og makroner</div></div></div>
+      </div>
+      <div class="price-banner">
+        <div class="big">Vinmenu: 2 glas 250,- · 3 glas 275,-</div>
+        <p>Tre nøje udvalgte glas – en frisk hvidvin, en fyldig rødvin og en afsluttende dessert- eller portvin, afstemt med retterne.</p>
+      </div>
+      <p class="fineprint">Smartbox, Morebox etc. kan ikke bruges til denne menu.</p>
     </div>
-  </section>
 
-  <!-- ============= INCLUSIVE ============= -->
-  <section class="section">
-    <div class="container">
-      <div class="inclusive" data-reveal>
-        <div class="inclusive__inner">
-          <div>
-            <span class="eyebrow" data-i18n="inclusive.eyebrow">En køreskole for alle</span>
-            <h2 class="inclusive__title" data-i18n="inclusive.title">Vi har erfaring med elever, som andre måske ikke har plads til</h2>
-            <p class="inclusive__text" data-i18n="inclusive.text">Mange af vores elever lever med diagnoser eller mentale udfordringer, der gør det sværere at lære i en traditionel sammenhæng. Hos os bliver du mødt, hvor du er — uden fordomme, uden forhastet tempo.</p>
-            <a href="saerlige-behov.html" class="btn btn--secondary btn--large">
-              <span data-i18n="inclusive.cta">Læs mere om vores tilgang</span>
-              <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </a>
-          </div>
-          <div class="inclusive__tags">
-            <span class="inclusive__tag" data-i18n="inclusive.tagStress">Stress</span>
-            <span class="inclusive__tag" data-i18n="inclusive.tagPTSD">PTSD</span>
-            <span class="inclusive__tag" data-i18n="inclusive.tagAnxiety">Angst</span>
-            <span class="inclusive__tag" data-i18n="inclusive.tagDepression">Depression</span>
-            <span class="inclusive__tag" data-i18n="inclusive.tagADHD">ADHD / ADD</span>
-            <span class="inclusive__tag" data-i18n="inclusive.tagAutism">Autisme · Asperger</span>
-          </div>
+    <!-- Månedens menu -->
+    <div class="panel" id="p-maaned">
+      <p class="note">Månedens menu · Sommermenu</p>
+      <div class="mgroup">
+        <div class="dish"><div><div class="d-name">Aperitif</div><div class="d-desc">Aperol Spritz og bruschetta</div></div><div class="d-price">45,-</div></div>
+        <div class="dish"><div><div class="d-name">Forret</div><div class="d-desc">Valgfri forret fra menukortet</div></div></div>
+        <div class="dish"><div><div class="d-name">Hovedret</div><div class="d-desc">Fyldt perlehønebryst eller kalvemørbrad med kartoffelgratin og pebersauce med svampe</div></div></div>
+        <div class="dish"><div><div class="d-name">Dessert</div><div class="d-desc">Crème brûlée</div></div></div>
+      </div>
+      <div class="price-banner">
+        <div class="big">3-retters menu – kun 295,-</div>
+        <p>Vinmenu kan tilkøbes for 275,- (hvidvin, rødvin &amp; dessert-/portvin)</p>
+      </div>
+      <p class="fineprint">OBS: MoreBox kan ikke benyttes til denne menu.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= VINKORT ======================= -->
+<section id="vinkort">
+  <div class="wrap" style="max-width:860px">
+    <div class="sec-head">
+      <span class="kicker">La cave</span>
+      <h2>Vinkort</h2>
+      <p>Et stort udvalg i alle prisklasser – med hovedvægt på franske vine. Der tages forbehold for prisændringer og udgåede vine.</p>
+    </div>
+
+    <details class="wine">
+      <summary>Champagne &amp; Crémant</summary>
+      <div class="wbody">
+        <div class="witem"><div class="wn"><strong>Crémant d'Alsace</strong></div><div class="wp">369,-</div></div>
+        <div class="witem"><div class="wn"><strong>Crémant d'Alsace Rosé</strong></div><div class="wp">369,-</div></div>
+        <div class="witem"><div class="wn"><strong>Pol Roger, Extra Cuvée de Réserve Champagne</strong></div><div class="wp">689,-</div></div>
+      </div>
+    </details>
+
+    <details class="wine">
+      <summary>Hvidvine</summary>
+      <div class="wbody">
+        <h4>Provence</h4>
+        <div class="witem"><div class="wn"><strong>1/1 Côté Mas</strong><span>Paul Mas</span></div><div class="wp">289,-</div></div>
+        <div class="witem"><div class="wn"><strong>1/1 Luberon Blanc</strong><span>Famille Perrin</span></div><div class="wp">299,-</div></div>
+        <h4>Bourgogne</h4>
+        <div class="witem"><div class="wn"><strong>Mâcon Villages Mémoire du Terroir</strong><span>Jean Marc Boillot</span></div><div class="wp">495,-</div></div>
+        <div class="witem"><div class="wn"><strong>Pouilly Fuissé</strong><span>Château de Beauregard</span></div><div class="wp">475,-</div></div>
+        <div class="witem"><div class="wn"><strong>Saint Véran</strong><span>Château de Beauregard</span></div><div class="wp">465,-</div></div>
+        <div class="witem"><div class="wn"><strong>Rully</strong><span>Faiveley</span></div><div class="wp">525,-</div></div>
+        <div class="witem"><div class="wn"><strong>Bourgogne Clos du Château</strong><span>Château de Meursault</span></div><div class="wp">999,-</div></div>
+        <div class="witem"><div class="wn"><strong>Bourgogne</strong><span>Faiveley</span></div><div class="wp">399,-</div></div>
+        <div class="witem"><div class="wn"><strong>Meursault 1er Cru</strong><span>Faiveley</span></div><div class="wp">899,-</div></div>
+        <div class="witem"><div class="wn"><strong>Puligny Montrachet</strong><span>Jean Marc Boillot</span></div><div class="wp">945,-</div></div>
+        <div class="witem"><div class="wn"><strong>Chassagne Montrachet Vieilles Vignes</strong><span>Vincent Girardin</span></div><div class="wp">1225,-</div></div>
+        <div class="witem"><div class="wn"><strong>Chablis</strong><span>Billaud-Simon</span></div><div class="wp">545,-</div></div>
+        <div class="witem"><div class="wn"><strong>Mercurey Clos Rochette</strong><span>Faiveley</span></div><div class="wp">799,-</div></div>
+        <h4>Loire</h4>
+        <div class="witem"><div class="wn"><strong>Pouilly Fumé</strong><span>Cedrick Bardin</span></div><div class="wp">435,-</div></div>
+        <div class="witem"><div class="wn"><strong>La Petite Perrière Sauvignon Blanc</strong><span>Guy Saget</span></div><div class="wp">369,-</div></div>
+        <div class="witem"><div class="wn"><strong>Sancerre</strong><span>Cedrick Bardin</span></div><div class="wp">435,-</div></div>
+        <h4>Alsace</h4>
+        <div class="witem"><div class="wn"><strong>Pinot Blanc</strong><span>Trimbach</span></div><div class="wp">359,-</div></div>
+        <div class="witem"><div class="wn"><strong>Riesling</strong><span>Trimbach</span></div><div class="wp">379,-</div></div>
+        <div class="witem"><div class="wn"><strong>Pinot Gris Réserve</strong><span>Trimbach</span></div><div class="wp">379,-</div></div>
+        <div class="witem"><div class="wn"><strong>Gewurztraminer</strong><span>Trimbach</span></div><div class="wp">379,-</div></div>
+        <div class="witem"><div class="wn"><strong>Riesling Cuvée Frédéric Émile</strong><span>Trimbach</span></div><div class="wp">799,-</div></div>
+        <div class="witem"><div class="wn"><strong>Riesling Sélection de Vieilles Vignes</strong><span>Trimbach</span></div><div class="wp">599,-</div></div>
+        <h4>Ikke-franske hvidvine</h4>
+        <div class="witem"><div class="wn"><strong>Italien – Pinot Grigio</strong><span>La Tunella</span></div><div class="wp">365,-</div></div>
+        <div class="witem"><div class="wn"><strong>Tyskland – Riesling</strong><span>S. A. Prüm</span></div><div class="wp">345,-</div></div>
+        <div class="witem"><div class="wn"><strong>Spanien – Albariño de Fefiñanes</strong><span>Bodegas del Palacio de Fefiñanes</span></div><div class="wp">395,-</div></div>
+        <div class="witem"><div class="wn"><strong>Sydafrika – Chardonnay</strong><span>Rustenberg</span></div><div class="wp">375,-</div></div>
+        <div class="witem"><div class="wn"><strong>New Zealand – Sauvignon Blanc</strong><span>Dashwood</span></div><div class="wp">399,-</div></div>
+        <div class="witem"><div class="wn"><strong>USA – Chardonnay</strong><span>Ramey</span></div><div class="wp">799,-</div></div>
+      </div>
+    </details>
+
+    <details class="wine">
+      <summary>Rosévine</summary>
+      <div class="wbody">
+        <div class="witem"><div class="wn"><strong>Pinot Noir Rosé</strong><span>La Petite Perrière, Loire</span></div><div class="wp">345,-</div></div>
+        <div class="witem"><div class="wn"><strong>Château Montaud Rosé</strong><span>Côtes de Provence</span></div><div class="wp">335,-</div></div>
+        <div class="witem"><div class="wn"><strong>Côté Mas Rosé Aurore</strong><span>Sud de France</span></div><div class="wp">289,-</div></div>
+      </div>
+    </details>
+
+    <details class="wine">
+      <summary>Rødvine</summary>
+      <div class="wbody">
+        <h4>Provence</h4>
+        <div class="witem"><div class="wn"><strong>1/1 Côté Mas</strong><span>Paul Mas</span></div><div class="wp">289,-</div></div>
+        <div class="witem"><div class="wn"><strong>Ventoux</strong><span>Famille Perrin</span></div><div class="wp">299,-</div></div>
+        <h4>Bourgogne</h4>
+        <div class="witem"><div class="wn"><strong>Morgon Grand Cras</strong><span>Domaine Joseph Burrier</span></div><div class="wp">389,-</div></div>
+        <div class="witem"><div class="wn"><strong>Gevrey Chambertin</strong><span>Faiveley</span></div><div class="wp">999,-</div></div>
+        <div class="witem"><div class="wn"><strong>Mercurey Clos des Myglands</strong><span>Faiveley</span></div><div class="wp">639,-</div></div>
+        <div class="witem"><div class="wn"><strong>Bourgogne Pinot Noir</strong><span>Faiveley</span></div><div class="wp">425,-</div></div>
+        <div class="witem"><div class="wn"><strong>Morey Saint Denis</strong><span>Domaine des Beaumont</span></div><div class="wp">729,-</div></div>
+        <div class="witem"><div class="wn"><strong>Chambolle Musigny</strong><span>Bryczek</span></div><div class="wp">785,-</div></div>
+        <h4>Bordeaux</h4>
+        <div class="witem"><div class="wn"><strong>Château Vieille Tour La Rose Grand Cru</strong><span>Saint-Émilion</span></div><div class="wp">599,-</div></div>
+        <div class="witem"><div class="wn"><strong>Barrail du Blanc Grand Cru</strong><span>Saint-Émilion</span></div><div class="wp">699,-</div></div>
+        <div class="witem"><div class="wn"><strong>Château Rocheyron</strong><span>Saint-Émilion</span></div><div class="wp">1299,-</div></div>
+        <div class="witem"><div class="wn"><strong>Château Tertre Roteboeuf Grand Cru</strong><span>Saint-Émilion</span></div><div class="wp">1699,-</div></div>
+        <div class="witem"><div class="wn"><strong>Château Lafleur Gazin</strong><span>Pomerol</span></div><div class="wp">745,-</div></div>
+        <div class="witem"><div class="wn"><strong>Château Latour à Pomerol</strong><span>Pomerol</span></div><div class="wp">999,-</div></div>
+        <div class="witem"><div class="wn"><strong>Les Tourelles de Longueville</strong><span>Médoc</span></div><div class="wp">699,-</div></div>
+        <div class="witem"><div class="wn"><strong>Château Meyney Cru Bourgeois</strong><span>Médoc</span></div><div class="wp">789,-</div></div>
+        <h4>Rhône</h4>
+        <div class="witem"><div class="wn"><strong>Gigondas</strong><span>Domaine Brusset</span></div><div class="wp">475,-</div></div>
+        <div class="witem"><div class="wn"><strong>Châteauneuf-du-Pape</strong><span>Blason Prince</span></div><div class="wp">575,-</div></div>
+        <h4>Italien</h4>
+        <div class="witem"><div class="wn"><strong>Valpolicella Ripasso</strong><span>La Casa do Reberta</span></div><div class="wp">389,-</div></div>
+        <div class="witem"><div class="wn"><strong>Amarone della Valpolicella</strong><span>Ca' Vendri</span></div><div class="wp">599,-</div></div>
+        <div class="witem"><div class="wn"><strong>Brunello di Montalcino</strong><span>Tenuta di Nardi</span></div><div class="wp">699,-</div></div>
+        <div class="witem"><div class="wn"><strong>Il Piccolo</strong><span>Peter Vinding-Diers, Montecarrubo</span></div><div class="wp">699,-</div></div>
+        <h4>Spanien</h4>
+        <div class="witem"><div class="wn"><strong>Unico</strong><span>Vega Sicilia</span></div><div class="wp">2.900,-</div></div>
+        <div class="witem"><div class="wn"><strong>Alion</strong><span>Vega Sicilia</span></div><div class="wp">999,-</div></div>
+        <div class="witem"><div class="wn"><strong>Hacienda Monasterio</strong><span>Bodegas Hacienda Monasterio</span></div><div class="wp">795,-</div></div>
+        <div class="witem"><div class="wn"><strong>Flor de Pingus</strong><span>Bodegas Hacienda Monasterio</span></div><div class="wp">1.299,-</div></div>
+        <div class="witem"><div class="wn"><strong>Amancio</strong><span>Bodegas Sierra Cantabria</span></div><div class="wp">899,-</div></div>
+        <div class="witem"><div class="wn"><strong>Finca El Bosque</strong><span>Bodegas Sierra Cantabria</span></div><div class="wp">899,-</div></div>
+        <h4>Amerika</h4>
+        <div class="witem"><div class="wn"><strong>Malbec Terroir</strong><span>Alta Vista</span></div><div class="wp">425,-</div></div>
+        <div class="witem"><div class="wn"><strong>Zinfandel</strong><span>Castoro</span></div><div class="wp">399,-</div></div>
+        <div class="witem"><div class="wn"><strong>Cabernet Sauvignon</strong><span>Raywood</span></div><div class="wp">379,-</div></div>
+      </div>
+    </details>
+
+    <details class="wine">
+      <summary>Dessertvine &amp; ½ flasker</summary>
+      <div class="wbody">
+        <h4>Dessertvine</h4>
+        <div class="witem"><div class="wn"><strong>Sauternes</strong></div><div class="wp">395,-</div></div>
+        <div class="witem"><div class="wn"><strong>Sauternes</strong><span>pr. glas</span></div><div class="wp">95,-</div></div>
+        <h4>Hvidvin &amp; rosé på ½ flasker</h4>
+        <div class="witem"><div class="wn"><strong>Gewurztraminer</strong><span>Trimbach</span></div><div class="wp">259,-</div></div>
+        <div class="witem"><div class="wn"><strong>Pinot Gris Réserve</strong><span>Trimbach</span></div><div class="wp">259,-</div></div>
+        <div class="witem"><div class="wn"><strong>Riesling</strong><span>Trimbach</span></div><div class="wp">259,-</div></div>
+        <div class="witem"><div class="wn"><strong>Chablis</strong><span>Pascal Bouchard</span></div><div class="wp">279,-</div></div>
+        <div class="witem"><div class="wn"><strong>Château Montaud Rosé</strong><span>Côtes de Provence</span></div><div class="wp">229,-</div></div>
+        <div class="witem"><div class="wn"><strong>Claude Val Blanc</strong><span>Paul Mas</span></div><div class="wp">139,-</div></div>
+        <h4>Rødvine på ½ flasker</h4>
+        <div class="witem"><div class="wn"><strong>Fleurie</strong><span>Château de Beauregard</span></div><div class="wp">235,-</div></div>
+        <div class="witem"><div class="wn"><strong>Chianti</strong><span>Poggiotondo</span></div><div class="wp">265,-</div></div>
+        <div class="witem"><div class="wn"><strong>Merlot</strong><span>Tunella</span></div><div class="wp">245,-</div></div>
+        <div class="witem"><div class="wn"><strong>Amarone</strong></div><div class="wp">299,-</div></div>
+        <div class="witem"><div class="wn"><strong>Claude Val Rouge</strong></div><div class="wp">139,-</div></div>
+        <div class="witem"><div class="wn"><strong>Barrail du Blanc</strong></div><div class="wp">299,-</div></div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ======================= BOOKING ======================= -->
+<section class="booking" id="book">
+  <div class="wrap">
+    <h2>Book dit bord</h2>
+    <p>Reservér online døgnet rundt – hurtigt og nemt med bekræftelse på mail.</p>
+    <div class="widget-box">
+      <!-- ============================================================
+           BOOKING-WIDGET:
+           Indsæt embed-koden fra jeres eksisterende booking-system her
+           (samme system som på restaurant-provence.dk/book-bord).
+           Indtil da linker knappen til den nuværende booking-side.
+           ============================================================ -->
+      <h3>Online bordbestilling</h3>
+      <p>Er der mindre end 24 timer til din ønskede reservation, bedes du ringe til os i stedet.</p>
+      <a class="btn btn-primary" href="https://restaurant-provence.dk/book-bord/">Book bord online</a>
+      <p style="margin-top:22px">Eller kontakt os direkte:<br>
+        <a href="tel:+4598135133"><strong>(+45) 98 13 51 33</strong></a> · <a href="mailto:booking@restaurant-provence.dk">booking@restaurant-provence.dk</a></p>
+      <p style="font-size:.85rem;margin-top:14px"><a href="https://restaurant-provence.dk/book-bord/gaest-konto/">Tilgå din eksisterende booking her</a></p>
+    </div>
+    <small>Bliv ikke snydt af vores tidsintervaller – du er velkommen til at blive hos os, så længe du har lyst. Vi sætter dog pris på, at du møder op til tiden.</small>
+  </div>
+</section>
+
+<!-- ======================= KONTAKT ======================= -->
+<section id="kontakt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker">Au revoir? Non – à bientôt!</span>
+      <h2>Kontakt &amp; find os</h2>
+      <p>Du er altid velkommen til at skrive eller ringe til os.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="c-card">
+        <h3>Café Provence</h3>
+        <div class="c-row"><span class="ic">📍</span><a href="https://maps.app.goo.gl/EtGgiSbTq1vwKqNC7" target="_blank" rel="noopener">Ved Stranden 11, 9000 Aalborg</a></div>
+        <div class="c-row"><span class="ic">📞</span><a href="tel:+4598135133">(+45) 98 13 51 33</a></div>
+        <div class="c-row"><span class="ic">✉️</span><a href="mailto:kontakt@restaurant-provence.dk">kontakt@restaurant-provence.dk</a></div>
+        <div class="c-row"><span class="ic">👍</span><a href="https://www.facebook.com/provence.dk/" target="_blank" rel="noopener">Følg os på Facebook</a></div>
+        <div class="hours">
+          <h4>Åbningstider</h4>
+          <table>
+            <tr><td>Mandag – Fredag</td><td>fra kl. 12</td></tr>
+            <tr><td>Lørdag – Søndag</td><td>fra kl. 11</td></tr>
+          </table>
+          <p style="font-size:.85rem;color:var(--ink-soft);margin-top:10px;font-style:italic">Brunch: man–fre 11–13, lør–søn 10–13 · Caféretter dagligt 12–16 · À la carte fra kl. 17</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ============= COURSES PREVIEW ============= -->
-  <section class="section">
-    <div class="container">
-      <header class="section-header" data-reveal>
-        <span class="eyebrow" data-i18n="coursesPreview.eyebrow">Kurser & priser</span>
-        <h2 class="section-title" data-i18n="coursesPreview.title">Find det kørekort, der passer til dig</h2>
-        <p class="section-lead" data-i18n="coursesPreview.lead">Klare priser, klar lovpakke. Ingen skjulte gebyrer — kun det, du forventer.</p>
-      </header>
-
-      <div class="courses">
-        <!-- Cat B -->
-        <article class="course-card course-card--featured" data-reveal>
-          <span class="course-card__badge" data-i18n="courses.popular">Populær</span>
-          <div class="course-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M5 11l1.5-4.5A2 2 0 018.4 5h7.2a2 2 0 011.9 1.5L19 11M5 11h14M5 11v6h2v2h2v-2h6v2h2v-2h2v-6" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
-              <circle cx="8" cy="14.5" r="1" fill="currentColor"/>
-              <circle cx="16" cy="14.5" r="1" fill="currentColor"/>
-            </svg>
-          </div>
-          <h3 class="course-card__title" data-i18n="courses.catBTitle">Kategori B</h3>
-          <p class="course-card__subtitle" data-i18n="courses.catBSubtitle">Bilkørekort — den klassiske vej</p>
-          <div class="course-card__price-row">
-            <span class="course-card__price" data-i18n="courses.catBPrice">17.900 kr</span>
-          </div>
-          <ul class="course-card__features">
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catBFeature1">28 × teorilektioner</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catBFeature4">16 × kørelektioner</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catBFeature6">Førstehjælpskursus</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catBFeature5">1 × leje af skolebil til køreprøven</span></li>
-          </ul>
-          <a href="holdstart.html#cat-b" class="btn btn--secondary" data-i18n="courses.signUp">Tilmeld dig</a>
-        </article>
-
-        <!-- Cat A -->
-        <article class="course-card" data-reveal>
-          <div class="course-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <circle cx="5.5" cy="16.5" r="3.5" stroke="currentColor" stroke-width="1.8"/>
-              <circle cx="18.5" cy="16.5" r="3.5" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M5.5 16.5L11 10h3l2-3h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M11 10l2 6.5h5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3 class="course-card__title" data-i18n="courses.catATitle">Kategori A</h3>
-          <p class="course-card__subtitle" data-i18n="courses.catASubtitle">Motorcykelkørekort</p>
-          <div class="course-card__price-row">
-            <span class="course-card__price" data-i18n="courses.catAPrice">13.000 kr</span>
-          </div>
-          <ul class="course-card__features">
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catAFeature1">29 × teorilektioner</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catAFeature4">13 × kørelektioner</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catAFeature3">5 × køreteknisk kursus</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.catAFeature6">1 × leje af skolemotorcykel</span></li>
-          </ul>
-          <a href="holdstart.html#cat-a" class="btn btn--secondary" data-i18n="courses.signUp">Tilmeld dig</a>
-        </article>
-
-        <!-- Routine -->
-        <article class="course-card" data-reveal>
-          <div class="course-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M21 12a9 9 0 11-3-6.7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-              <path d="M21 4v5h-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <h3 class="course-card__title" data-i18n="courses.routineTitle">Rutinekørsel</h3>
-          <p class="course-card__subtitle" data-i18n="courses.routineSubtitle">Genopfrisk din kørsel</p>
-          <div class="course-card__price-row">
-            <span class="course-card__price" data-i18n="courses.routinePrice">790 kr</span>
-            <span class="course-card__price-unit" data-i18n="courses.perLesson">pr. lektion (45 min)</span>
-          </div>
-          <ul class="course-card__features">
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.routineFeature2">Tilpasset dit niveau og behov</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.routineFeature3">Ingen forpligtelse på flere lektioner</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i18n="courses.routineFeature1">Lektion á 45 minutter</span></li>
-          </ul>
-          <a href="holdstart.html#routine" class="btn btn--secondary" data-i18n="courses.signUp">Tilmeld dig</a>
-        </article>
-      </div>
-
-      <div style="text-align: center; margin-top: 3rem;" data-reveal>
-        <a href="holdstart.html" class="btn btn--ghost btn--large" data-i18n="coursesPreview.cta">
-          Se alle kurser
-        </a>
+      <div class="map">
+        <iframe title="Kort – Café Provence, Ved Stranden 11, Aalborg" src="https://maps.google.com/maps?q=57.05051932177851%2C+9.920052596991802&t=ROADMAP&z=17&output=embed&iwloc=near" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ============= FINAL CTA ============= -->
-  <section class="section">
-    <div class="container">
-      <div class="cta-banner" data-reveal>
-        <div>
-          <h2 data-i18n="ctaBanner.title">Klar til at komme i gang?</h2>
-          <p data-i18n="ctaBanner.text">Tag det første skridt mod kørekortet. Vi sidder klar til en uforpligtende snak om, hvordan vi kan hjælpe dig videre.</p>
-        </div>
-        <div class="cta-banner__actions">
-          <a href="kontakt.html" class="btn btn--primary btn--large" data-i18n="ctaBanner.primary">Kontakt os</a>
-          <a href="tel:60217181" class="btn btn--secondary btn--large">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.37 1.9.72 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span data-i18n="ctaBanner.secondary">Ring 60217181</span>
-          </a>
-        </div>
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div class="f-brand">
+        <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M30 52 C30 38 30 24 30 10" stroke="#9BA36E" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M30 44 C22 42 18 36 17 30 C24 32 28 37 30 44Z" fill="#A99FD1"/>
+          <path d="M30 44 C38 42 42 36 43 30 C36 32 32 37 30 44Z" fill="#A99FD1"/>
+          <path d="M30 32 C23 30 20 25 19 20 C25 22 28 26 30 32Z" fill="#C0B8E0"/>
+          <path d="M30 32 C37 30 40 25 41 20 C35 22 32 26 30 32Z" fill="#C0B8E0"/>
+          <ellipse cx="30" cy="12" rx="4.5" ry="6.5" fill="#8C82B8"/>
+        </svg>
+        <h4>Café Provence</h4>
+        <p>Fransk café &amp; bistro i hjertet af Aalborg – ved Limfjorden.</p>
+      </div>
+      <div>
+        <h4>Menukort</h4>
+        <ul>
+          <li><a href="#menukort">Brunch</a></li>
+          <li><a href="#menukort">Café kort</a></li>
+          <li><a href="#menukort">À la carte</a></li>
+          <li><a href="#menukort">Provence menu</a></li>
+          <li><a href="#vinkort">Vinkort</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="https://maps.app.goo.gl/EtGgiSbTq1vwKqNC7" target="_blank" rel="noopener">Ved Stranden 11, 9000 Aalborg</a></li>
+          <li><a href="tel:+4598135133">(+45) 98 13 51 33</a></li>
+          <li><a href="mailto:kontakt@restaurant-provence.dk">kontakt@restaurant-provence.dk</a></li>
+          <li><a href="https://www.facebook.com/provence.dk/" target="_blank" rel="noopener">Facebook</a></li>
+        </ul>
       </div>
     </div>
-  </section>
-
-  <!-- ============= FOOTER ============= -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__grid">
-        <div>
-          <div class="footer__brand">
-            <img src="assets/logo.svg" alt="" width="40" height="40" data-logo />
-            <span>Trafikparat</span>
-          </div>
-          <p class="footer__tagline" data-i18n="footer.tagline">Køreskole i Aalborg, der sætter den enkelte elev i centrum.</p>
-          <div class="footer__social">
-            <a href="https://facebook.com/trafikparat" target="_blank" rel="noopener" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.33v6.99C18.34 21.13 22 16.99 22 12z"/></svg>
-            </a>
-            <a href="https://instagram.com/trafikparat" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="footer__col">
-          <h4 data-i18n="footer.explore">Udforsk</h4>
-          <ul>
-            <li><a href="index.html" data-i18n="nav.home">Forside</a></li>
-            <li><a href="holdstart.html" data-i18n="nav.courses">Holdstart</a></li>
-            <li><a href="saerlige-behov.html" data-i18n="nav.support">Særlige behov</a></li>
-            <li><a href="om-os.html" data-i18n="nav.about">Om os</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__col">
-          <h4 data-i18n="footer.services">Kurser</h4>
-          <ul>
-            <li><a href="holdstart.html#cat-b" data-i18n="courses.catBTitle">Kategori B</a></li>
-            <li><a href="holdstart.html#cat-a" data-i18n="courses.catATitle">Kategori A</a></li>
-            <li><a href="holdstart.html#routine" data-i18n="courses.routineTitle">Rutinekørsel</a></li>
-            <li><a href="holdstart.html#instructor" data-i18n="courses.instructorTitle">Kørelæreruddannelsen</a></li>
-          </ul>
-        </div>
-
-        <div class="footer__col">
-          <h4 data-i18n="footer.contact">Kontakt</h4>
-          <ul>
-            <li><a href="tel:60217181">60 21 71 81</a></li>
-            <li><a href="mailto:info@trafikparat.dk">info@trafikparat.dk</a></li>
-            <li><a href="https://www.google.com/maps/search/?api=1&query=Maren+Turis+Gade+2%2C+9000+Aalborg" target="_blank" rel="noopener">Maren Turis Gade 2<br/>9000 Aalborg</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer__bottom">
-        <span>© <span id="footer-year"></span> Trafikparat · <span data-i18n="footer.cvr">CVR 39757389</span></span>
-        <span data-i18n="footer.rights">Alle rettigheder forbeholdes.</span>
-      </div>
+    <div class="f-bottom">
+      <span>© 2026 Café Provence · cafeprovence.dk · Alle rettigheder forbeholdes.</span>
+      <span><a href="https://www.findsmiley.dk/538551" target="_blank" rel="noopener">Smiley-rapporter</a></span>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
-  <script src="js/proposal.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/main.js"></script>
+<script>
+  // Menu-faner
+  document.querySelectorAll('.tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active')});
+      document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active')});
+      tab.classList.add('active');
+      document.getElementById(tab.dataset.panel).classList.add('active');
+    });
+  });
+  // Luk mobilmenu ved klik på link
+  document.querySelectorAll('nav.menu a').forEach(function(a){
+    a.addEventListener('click', function(){document.querySelector('nav.menu').classList.remove('open')});
+  });
+</script>
 </body>
 </html>
