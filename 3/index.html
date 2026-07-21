@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café Provence – Fransk café & bistro i Aalborg centrum</title>
+<meta name="description" content="Café Provence i hjertet af Aalborg – brunch, frokost og franske klassikere ved Limfjorden. Book bord online eller ring 98 13 51 33.">
+<link rel="canonical" href="https://cafeprovence.dk/">
+<meta property="og:title" content="Café Provence – Fransk café & bistro i Aalborg">
+<meta property="og:description" content="Brunch, frokost og franske klassikere i hjertet af Aalborg. Book bord online.">
+<meta property="og:url" content="https://cafeprovence.dk/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:image" content="https://restaurant-provence.dk/wp-content/uploads/2025/06/RS-forside-1.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Karla:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#FFF9EF;
+    --ink:#26201B;
+    --red:#CE3A2E;       /* vinduesrammernes røde */
+    --green:#37693F;     /* glas-grøn */
+    --mustard:#E0A32E;   /* gyldent glas */
+    --pink:#DE7FA4;      /* mosaik-pink */
+    --soft:#6E6357;
+    --border:2px solid var(--ink);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Karla',sans-serif;font-weight:400;
+    background:var(--paper);color:var(--ink);line-height:1.65;font-size:16.5px;
+  }
+  h1,h2,h3{font-family:'Fraunces',serif;line-height:1.05}
+  img{max-width:100%;display:block}
+  a{color:var(--red)}
+
+  /* ================= Header ================= */
+  header{
+    position:sticky;top:0;z-index:60;background:var(--paper);
+    border-bottom:var(--border);
+  }
+  .bar{
+    max-width:1200px;margin:0 auto;padding:0 20px;height:66px;
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+  }
+  .logo3{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+  .logo3 svg{height:40px;width:auto}
+  .logo3 b{font-family:'Fraunces',serif;font-weight:900;font-size:1.35rem;letter-spacing:-.01em}
+  .logo3 b i{color:var(--red);font-style:italic;font-weight:600}
+  header nav{display:flex;gap:22px;align-items:center}
+  header nav a{
+    text-decoration:none;color:var(--ink);font-weight:500;font-size:.92rem;
+    letter-spacing:.04em;
+  }
+  header nav a:hover{color:var(--red)}
+  .btn{
+    display:inline-block;text-decoration:none;cursor:pointer;text-align:center;
+    font-family:'Karla',sans-serif;font-weight:700;font-size:.95rem;letter-spacing:.05em;
+    padding:12px 26px;border:var(--border);border-radius:0;transition:.15s;
+    box-shadow:4px 4px 0 var(--ink);
+  }
+  .btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+  .btn-red{background:var(--red);color:#fff}
+  .btn-paper{background:var(--paper);color:var(--ink)}
+  header .btn{padding:9px 18px;font-size:.85rem}
+  .burger3{display:none;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--ink)}
+
+  /* ================= Hero ================= */
+  .hero{
+    border-bottom:var(--border);overflow:hidden;position:relative;
+    padding:76px 20px 60px;text-align:center;
+  }
+  .hero .pretitle{
+    display:inline-block;border:var(--border);background:var(--mustard);
+    padding:5px 18px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;font-size:.78rem;
+    box-shadow:4px 4px 0 var(--ink);margin-bottom:30px;transform:rotate(-2deg);
+  }
+  .hero h1{
+    font-size:clamp(3.2rem,11vw,8rem);font-weight:900;letter-spacing:-.03em;
+    text-transform:uppercase;
+  }
+  .hero h1 .l1{display:block}
+  .hero h1 .l2{display:block;color:var(--red);font-style:italic;font-weight:600}
+  .hero p.lead{max-width:560px;margin:26px auto 34px;font-size:1.12rem;color:var(--soft)}
+  .hero .ctas{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+  .hero .dots{position:absolute;pointer-events:none;inset:0}
+  .hero .dots span{position:absolute;border-radius:50%;border:var(--border)}
+  .hero .dots .d1{width:52px;height:52px;background:var(--pink);top:14%;left:8%;transform:rotate(8deg)}
+  .hero .dots .d2{width:34px;height:34px;background:var(--green);top:64%;left:14%}
+  .hero .dots .d3{width:66px;height:66px;background:var(--mustard);top:22%;right:9%}
+  .hero .dots .d4{width:30px;height:30px;background:var(--red);top:70%;right:13%}
+  @media(max-width:700px){.hero .dots{display:none}}
+
+  /* ================= Marquee ================= */
+  .marquee{
+    border-bottom:var(--border);background:var(--green);color:var(--paper);
+    overflow:hidden;white-space:nowrap;padding:12px 0;
+  }
+  .marquee .track{display:inline-block;animation:scroll 28s linear infinite}
+  .marquee span{
+    font-family:'Fraunces',serif;font-style:italic;font-size:1.05rem;letter-spacing:.06em;
+    margin:0 26px;
+  }
+  .marquee b{color:var(--mustard);font-weight:400}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ================= Sections ================= */
+  section{padding:86px 20px}
+  .wrap{max-width:1100px;margin:0 auto}
+  .tag{
+    display:inline-block;border:var(--border);padding:4px 16px;font-weight:700;
+    letter-spacing:.2em;text-transform:uppercase;font-size:.75rem;margin-bottom:18px;
+    box-shadow:3px 3px 0 var(--ink);
+  }
+  .tag.pink{background:var(--pink)}
+  .tag.mustard{background:var(--mustard)}
+  .tag.green{background:var(--green);color:#fff}
+  .tag.red{background:var(--red);color:#fff}
+  h2.big{font-size:clamp(2.2rem,5.5vw,3.6rem);font-weight:900;letter-spacing:-.02em;margin-bottom:18px}
+
+  /* ================= Om os ================= */
+  .om-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+  .om-grid p{margin-bottom:14px;color:var(--soft)}
+  .om-grid p strong{color:var(--ink)}
+  .polaroids{position:relative;min-height:460px}
+  .pol{
+    position:absolute;background:#fff;border:var(--border);padding:12px 12px 40px;
+    box-shadow:6px 6px 0 rgba(38,32,27,.9);
+  }
+  .pol img{aspect-ratio:4/3;object-fit:cover;width:100%}
+  .pol figcaption{
+    font-family:'Fraunces',serif;font-style:italic;text-align:center;margin-top:10px;font-size:.95rem;
+  }
+  .pol.a{width:62%;top:0;left:0;transform:rotate(-4deg);z-index:2}
+  .pol.b{width:58%;bottom:0;right:0;transform:rotate(3deg);z-index:3}
+
+  /* ================= Tider ================= */
+  .tider{border-top:var(--border);border-bottom:var(--border);background:#FBF2E2}
+  .t-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .t-card{border:var(--border);background:var(--paper);padding:30px;box-shadow:6px 6px 0 var(--ink);position:relative}
+  .t-card h3{font-size:1.7rem;font-weight:900;margin-bottom:8px}
+  .t-card p{color:var(--soft);font-size:.95rem}
+  .t-card .pris{
+    display:inline-block;margin-top:14px;font-family:'Fraunces',serif;font-weight:900;font-size:1.6rem;
+    background:var(--mustard);border:var(--border);padding:2px 14px;transform:rotate(-2deg);
+  }
+  .t-card.c1{border-top:10px solid var(--red)}
+  .t-card.c2{border-top:10px solid var(--green)}
+  .t-card.c3{border-top:10px solid var(--pink)}
+
+  /* ================= Menukort ================= */
+  .menu-nav{
+    position:sticky;top:66px;z-index:50;background:var(--paper);border-bottom:var(--border);
+    overflow-x:auto;-webkit-overflow-scrolling:touch;
+  }
+  .menu-nav .inner{display:flex;gap:10px;padding:12px 20px;max-width:1100px;margin:0 auto}
+  .menu-nav a{
+    flex-shrink:0;text-decoration:none;color:var(--ink);border:var(--border);
+    padding:7px 18px;font-weight:700;font-size:.85rem;letter-spacing:.05em;background:var(--paper);
+    transition:.15s;
+  }
+  .menu-nav a:hover{background:var(--mustard)}
+  .mcard{
+    border:var(--border);background:#fff;box-shadow:8px 8px 0 var(--ink);
+    padding:44px 40px;margin-bottom:56px;scroll-margin-top:140px;
+  }
+  .mcard .mhead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;border-bottom:var(--border);padding-bottom:16px;margin-bottom:10px}
+  .mcard .mhead h3{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900}
+  .mcard .mhead .when{font-family:'Fraunces',serif;font-style:italic;color:var(--soft)}
+  .kat{margin-top:30px}
+  .kat h4{
+    display:inline-block;font-family:'Fraunces',serif;font-weight:600;font-style:italic;font-size:1.35rem;
+    background:var(--paper);border:var(--border);padding:2px 16px;margin-bottom:8px;transform:rotate(-1deg);
+  }
+  .kat .knote{font-style:italic;color:var(--soft);font-size:.9rem;margin:6px 0 8px}
+  .ret{display:flex;justify-content:space-between;gap:16px;align-items:baseline;padding:12px 0;border-bottom:1px solid #E8DCC8}
+  .ret:last-child{border-bottom:none}
+  .ret .rn{font-weight:700}
+  .ret .rd{color:var(--soft);font-size:.9rem}
+  .ret .rf{color:var(--red);font-style:italic;font-size:.85rem;font-family:'Fraunces',serif}
+  .ret .rp{
+    white-space:nowrap;font-family:'Fraunces',serif;font-weight:900;font-size:1.1rem;
+  }
+  .stamp{
+    text-align:center;border:var(--border);background:var(--mustard);padding:22px;margin:26px 0 6px;
+    box-shadow:5px 5px 0 var(--ink);
+  }
+  .stamp .sb{font-family:'Fraunces',serif;font-weight:900;font-size:1.8rem}
+  .stamp p{font-size:.92rem}
+  .obs{font-style:italic;color:var(--soft);font-size:.85rem;text-align:center;margin-top:14px}
+
+  /* Vin: to kolonner */
+  .vin-cols{columns:2;column-gap:44px}
+  .vin-blok{break-inside:avoid;margin-bottom:26px}
+  .vin-blok h4{
+    font-family:'Fraunces',serif;font-weight:900;font-size:1.15rem;text-transform:uppercase;
+    letter-spacing:.08em;border-bottom:var(--border);padding-bottom:4px;margin-bottom:8px;
+  }
+  .vin-blok h5{font-family:'Fraunces',serif;font-style:italic;font-weight:600;font-size:1rem;color:var(--red);margin:12px 0 4px}
+  .vin{display:flex;justify-content:space-between;gap:10px;font-size:.92rem;padding:4px 0}
+  .vin .vd{color:var(--soft);font-size:.82rem;display:block}
+  .vin .vp{white-space:nowrap;font-weight:700}
+  @media(max-width:800px){.vin-cols{columns:1}}
+
+  /* ================= Booking ================= */
+  .booking3{background:var(--red);border-top:var(--border);border-bottom:var(--border);color:#fff;text-align:center}
+  .booking3 h2{color:#fff}
+  .booking3 .tag{background:var(--paper);color:var(--ink)}
+  .bbox{
+    max-width:620px;margin:30px auto 0;background:var(--paper);color:var(--ink);
+    border:var(--border);box-shadow:8px 8px 0 var(--ink);padding:44px 34px;
+  }
+  .bbox h3{font-size:1.8rem;font-weight:900;margin-bottom:12px}
+  .bbox p{color:var(--soft);margin-bottom:10px}
+  .bbox .tel{font-family:'Fraunces',serif;font-weight:900;font-size:1.7rem;color:var(--ink);text-decoration:none;display:inline-block;margin:8px 0}
+  .booking3 .obs{color:#FBE3DF;max-width:560px;margin:24px auto 0}
+
+  /* ================= Kontakt ================= */
+  .k-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:stretch}
+  .k-card{border:var(--border);background:#fff;box-shadow:8px 8px 0 var(--ink);padding:40px}
+  .k-card h3{font-size:1.9rem;font-weight:900;margin-bottom:20px}
+  .k-line{display:flex;gap:12px;margin-bottom:13px}
+  .k-line a{color:var(--ink);text-decoration:none;font-weight:500}
+  .k-line a:hover{color:var(--red)}
+  .k-card table{width:100%;border-collapse:collapse;margin-top:18px;border-top:var(--border)}
+  .k-card td{padding:8px 0;color:var(--soft)}
+  .k-card td:last-child{text-align:right;color:var(--ink);font-weight:700}
+  .k-map{border:var(--border);box-shadow:8px 8px 0 var(--ink);min-height:400px}
+  .k-map iframe{width:100%;height:100%;min-height:400px;border:0}
+
+  /* ================= Footer ================= */
+  footer{border-top:var(--border);background:var(--ink);color:#EFE6D8;padding:46px 20px 30px;text-align:center}
+  footer .fm{font-family:'Fraunces',serif;font-weight:900;font-size:1.6rem;color:#fff}
+  footer .fm i{color:var(--mustard);font-style:italic;font-weight:600}
+  footer .flinks{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin:16px 0}
+  footer .flinks a{color:#EFE6D8;text-decoration:none;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+  footer .flinks a:hover{color:var(--mustard)}
+  footer p{font-size:.88rem;color:#B9AE9D}
+  footer a{color:#EFE6D8}
+
+  /* ================= Responsive ================= */
+  @media(max-width:900px){
+    .om-grid,.k-grid{grid-template-columns:1fr}
+    .t-grid{grid-template-columns:1fr}
+    .polaroids{min-height:380px}
+    header nav{
+      position:fixed;left:0;right:0;top:66px;background:var(--paper);border-bottom:var(--border);
+      flex-direction:column;padding:22px;display:none;
+    }
+    header nav.open{display:flex}
+    .burger3{display:block}
+    .mcard{padding:30px 20px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="bar">
+    <a class="logo3" href="#top" aria-label="Café Provence – forside">
+      <!-- Logo: kaffekop med glasmosaik-farver -->
+      <svg viewBox="0 0 90 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M12 22 H62 V44 A22 18 0 0 1 18 44 Z" fill="#CE3A2E" stroke="#26201B" stroke-width="3"/>
+        <path d="M62 26 H72 A9 9 0 0 1 72 44 H60" fill="none" stroke="#26201B" stroke-width="3"/>
+        <ellipse cx="37" cy="22" rx="25" ry="5" fill="#FFF9EF" stroke="#26201B" stroke-width="3"/>
+        <path d="M28 12 C26 8 30 6 29 2 M40 12 C38 8 42 6 41 2 M52 12 C50 8 54 6 53 2" fill="none" stroke="#26201B" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="24" cy="34" r="4" fill="#E0A32E" stroke="#26201B" stroke-width="2"/>
+        <circle cx="38" cy="38" r="4" fill="#37693F" stroke="#26201B" stroke-width="2"/>
+        <circle cx="51" cy="33" r="4" fill="#DE7FA4" stroke="#26201B" stroke-width="2"/>
+        <path d="M10 62 H80" stroke="#26201B" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <b>Café <i>Provence</i></b>
+    </a>
+    <button class="burger3" aria-label="Menu" onclick="document.querySelector('header nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="#om">Om os</a>
+      <a href="#menukort">Menukort</a>
+      <a href="#vin">Vinkort</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="btn btn-red" href="#book">Book bord</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero" id="top">
+  <div class="dots" aria-hidden="true"><span class="d1"></span><span class="d2"></span><span class="d3"></span><span class="d4"></span></div>
+  <span class="pretitle">Fransk café &amp; bistro · Aalborg</span>
+  <h1><span class="l1">Café</span><span class="l2">Provence</span></h1>
+  <p class="lead">Glasmosaik i vinduerne, kunst på væggene og franske klassikere på bordet – midt i Aalborg, et stenkast fra Limfjorden.</p>
+  <div class="ctas">
+    <a class="btn btn-red" href="#book">Book dit bord</a>
+    <a class="btn btn-paper" href="#menukort">Se menukort</a>
+  </div>
+</div>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Brunch alle dage <b>· kun 169,- ·</b></span>
+    <span>Månedens 3-retters menu <b>· kun 295,- ·</b></span>
+    <span>Provence menu <b>· 2 retter fra 289,- ·</b></span>
+    <span>À la carte alle aftener fra kl. 17 <b>· Vive la France ·</b></span>
+    <span>Brunch alle dage <b>· kun 169,- ·</b></span>
+    <span>Månedens 3-retters menu <b>· kun 295,- ·</b></span>
+    <span>Provence menu <b>· 2 retter fra 289,- ·</b></span>
+    <span>À la carte alle aftener fra kl. 17 <b>· Vive la France ·</b></span>
+  </div>
+</div>
+
+<!-- ================= OM OS ================= -->
+<section id="om">
+  <div class="wrap om-grid">
+    <div>
+      <span class="tag pink">Bienvenue</span>
+      <h2 class="big">Halvt galleri, halvt spisestue</h2>
+      <p>Bag de buede vinduer med <strong>farvestrålende glasmosaik</strong> finder du en café, der er lige dele gammel europæisk cafétradition og legesygt kunstgalleri. Dybe røde rammer, grønt glas i loftet, malerier på væggene – og hvide duge og bentwood-stole, som en fransk café skal have det.</p>
+      <p>Vi har ladet os inspirere af de stolte franske traditioner i interiøret, musikken og gastronomien. Menukortet er en kulinarisk rejse med <strong>lækre fiskeretter, skaldyr og kødretter</strong> – og vinkortet, med hovedvægt på franske vine i alle prisklasser, er et kapitel for sig.</p>
+      <p>Uanset hvilken vin du vælger, garanterer vi for kvaliteten.</p>
+    </div>
+    <div class="polaroids">
+      <figure class="pol a">
+        <img src="https://restaurant-provence.dk/wp-content/uploads/2025/06/RS-forside-1.jpg" alt="Caféens farverige interiør med glasmosaikvinduer og kunst" loading="lazy">
+        <figcaption>Vores stue – glasmosaik &amp; kunst</figcaption>
+      </figure>
+      <figure class="pol b">
+        <img src="https://restaurant-provence.dk/wp-content/uploads/2025/06/maned-menu-1.jpg" alt="Fransk ret med sauce, kartofler og grøntsager" loading="lazy">
+        <figcaption>Franske klassikere fra køkkenet</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TIDER ================= -->
+<section class="tider">
+  <div class="wrap">
+    <span class="tag mustard">La cuisine</span>
+    <h2 class="big">Dagens rytme</h2>
+    <div class="t-grid">
+      <div class="t-card c1">
+        <h3>Brunch</h3>
+        <p>Mandag–fredag 11–13<br>Lørdag–søndag 10–13</p>
+        <span class="pris">169,-</span>
+      </div>
+      <div class="t-card c2">
+        <h3>Café &amp; frokost</h3>
+        <p>Caféretter serveres<br>dagligt 12–16</p>
+        <span class="pris">fra 99,-</span>
+      </div>
+      <div class="t-card c3">
+        <h3>Aften</h3>
+        <p>À la carte alle aftener<br>fra kl. 17</p>
+        <span class="pris">fra 229,-</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MENU-NAV ================= -->
+<div class="menu-nav" id="menukort">
+  <div class="inner">
+    <a href="#m-brunch">Brunch</a>
+    <a href="#m-cafe">Café kort</a>
+    <a href="#m-alacarte">À la carte</a>
+    <a href="#m-provence">Provence menu</a>
+    <a href="#m-maaned">Månedens menu</a>
+    <a href="#vin">Vinkort</a>
+  </div>
+</div>
+
+<!-- ================= MENUKORT ================= -->
+<section style="padding-top:70px">
+  <div class="wrap">
+
+    <!-- Brunch -->
+    <div class="mcard" id="m-brunch">
+      <div class="mhead"><h3>Brunch</h3><span class="when">Man–fre 11–13 · Lør–søn 10–13</span></div>
+      <div class="stamp">
+        <div class="sb">Brunch – kun 169,-</div>
+        <p>Æg, bacon, brunchpølse, røget laks, skyr med müesli, hønsesalat, pålæg, ost med frugt og pandekage med sirup. <em>(Eksklusiv drikkevarer)</em></p>
+      </div>
+    </div>
+
+    <!-- Café kort -->
+    <div class="mcard" id="m-cafe">
+      <div class="mhead"><h3>Café kort</h3><span class="when">Caféretter – dagligt 12–16</span></div>
+      <div class="kat">
+        <div class="ret"><div><div class="rn">Frokostplatte</div><div class="rd">F.eks. med sild, laks, rejer, hønsesalat, ost og en lun ting</div></div><div class="rp">159,-</div></div>
+        <div class="ret"><div><div class="rn">Pariserbøf</div><div class="rd">Med rødbeder, løg, kapers, revet peberrod og rå æggeblomme</div></div><div class="rp">99,-</div></div>
+        <div class="ret"><div><div class="rn">Wienerschnitzel</div><div class="rd">Med brasede kartofler, smørsovs, ærter og wienerdreng</div></div><div class="rp">269,-</div></div>
+        <div class="ret"><div><div class="rn">Stjerneskud</div><div class="rd">Med pandestegt fiskefilet, rejer, asparges, kaviar og røget laks</div></div><div class="rp">199,-</div></div>
+        <div class="ret"><div><div class="rn">Moules Frites</div><div class="rd">Hvidvinsdampede blåmuslinger med pommes frites og hvidløgsmayonnaise</div></div><div class="rp">199,-</div></div>
+        <div class="ret"><div><div class="rn">Omelet</div><div class="rd">Med bacon, kartofler og løg</div></div><div class="rp">129,-</div></div>
+        <div class="ret"><div><div class="rn">Croque Madame</div><div class="rd">Toastbrød med skinke, ost, sennep og spejlæg</div></div><div class="rp">119,-</div></div>
+        <div class="ret"><div><div class="rn">Café burger</div><div class="rd">Serveret med oksekød fra Himmerland, frisk salat, hjemmelavet dressing og sprøde pommes frites</div></div><div class="rp">169,-</div></div>
+        <div class="ret"><div><div class="rn">Pasta Carbonara</div><div class="rd">Frisk pasta i flødesauce med bacon</div></div><div class="rp">119,-</div></div>
+        <div class="ret"><div><div class="rn">Pasta med tigerrejer</div><div class="rd">Frisk pasta i hummersauce med tigerrejer</div></div><div class="rp">119,-</div></div>
+        <div class="ret"><div><div class="rn">Pasta med kylling</div><div class="rd">Frisk pasta med stykker af kylling vendt i pesto</div></div><div class="rp">119,-</div></div>
+      </div>
+    </div>
+
+    <!-- À la carte -->
+    <div class="mcard" id="m-alacarte">
+      <div class="mhead"><h3>À la carte</h3><span class="when">Aftenmenu – alle aftener fra kl. 17</span></div>
+      <div class="kat">
+        <h4>Forretter</h4>
+        <div class="ret"><div><div class="rn">½ hummer naturel</div><div class="rd">Serveret med 2 dressinger og citron</div><div class="rf">½ Homard nature</div></div><div class="rp">149,-</div></div>
+        <div class="ret"><div><div class="rn">Fiskesuppe</div><div class="rd">Med stykker af fisk og skaldyr</div><div class="rf">Soupe de poisson</div></div><div class="rp">119,-</div></div>
+        <div class="ret"><div><div class="rn">Hummersuppe</div><div class="rd">Tilsmagt med cognac</div><div class="rf">Soupe de homard</div></div><div class="rp">129,-</div></div>
+        <div class="ret"><div><div class="rn">Blåmuslinger</div><div class="rd">Dampet i fløde og hvidvin</div><div class="rf">Moules Marinières</div></div><div class="rp">135,-</div></div>
+        <div class="ret"><div><div class="rn">Østers</div><div class="rd">Serveret med citron og rødløgseddike – pr. stk.</div><div class="rf">Huîtres de Bretagne</div></div><div class="rp">45,-</div></div>
+        <div class="ret"><div><div class="rn">Tigerrejer</div><div class="rd">Pankopaneret på blandet salat</div><div class="rf">Crevettes géantes</div></div><div class="rp">129,-</div></div>
+        <div class="ret"><div><div class="rn">Røget laks</div><div class="rd">Med spinat à la creme</div><div class="rf">Saumon fumé avec épinards à la crème</div></div><div class="rp">125,-</div></div>
+        <div class="ret"><div><div class="rn">Håndpillede rejer</div><div class="rd">På sprød crouton og citronmayo</div></div><div class="rp">129,-</div></div>
+        <div class="ret"><div><div class="rn">Carpaccio</div><div class="rd">Af laks med revet parmesan, pesto og salat</div></div><div class="rp">139,-</div></div>
+        <div class="ret"><div><div class="rn">Snegle i hvidløg</div><div class="rf">Escargots à l'ail</div></div><div class="rp">119,-</div></div>
+      </div>
+      <div class="kat">
+        <h4>Hovedretter</h4>
+        <div class="ret"><div><div class="rn">Laks</div><div class="rd">Bagt, serveret med spinatsauce, kartofler og dagens friske grøntsager</div><div class="rf">Filet de saumon cuit au four</div></div><div class="rp">229,-</div></div>
+        <div class="ret"><div><div class="rn">1/1 hummer</div><div class="rd">Gratineret i hummersauce</div><div class="rf">Homard grillé</div></div><div class="rp">259,-</div></div>
+        <div class="ret"><div><div class="rn">Skaldyrsfad</div><div class="rd">½ hummer, krebs, jomfruhummerhaler, grønlandske rejer, tigerrejer, østers, blåmuslinger og krabbeklør. Serveres med citron, 4 slags dressinger, brød og smør</div><div class="rf">Plateau de fruits de mer – min. 2 couverter</div></div><div class="rp">529,-</div></div>
+        <div class="ret"><div><div class="rn">Tournedos bearnaise</div><div class="rd">200 g oksemørbrad</div><div class="rf">Tournedos, sauce béarnaise</div></div><div class="rp">299,-</div></div>
+        <div class="ret"><div><div class="rn">Tournedos Rossini</div><div class="rd">200 g oksemørbrad med trøffel og foie gras</div><div class="rf">Tournedos Rossini</div></div><div class="rp">349,-</div></div>
+        <div class="ret"><div><div class="rn">Hvidløgsbøf</div><div class="rd">200 g oksemørbrad, hvidløg, salat og hvidløgssmør</div><div class="rf">Bœuf avec ail</div></div><div class="rp">329,-</div></div>
+        <div class="ret"><div><div class="rn">Confiteret andelår</div><div class="rd">Serveres med rødvinssauce</div><div class="rf">Confit de canard</div></div><div class="rp">259,-</div></div>
+        <div class="ret"><div><div class="rn">Lammekrone</div><div class="rd">Serveres med glace</div><div class="rf">Carré d'agneau</div></div><div class="rp">289,-</div></div>
+        <div class="ret"><div><div class="rn">Wienerschnitzel</div><div class="rd">Af kalv</div></div><div class="rp">269,-</div></div>
+      </div>
+      <div class="kat">
+        <h4>Desserter</h4>
+        <div class="ret"><div><div class="rn">Ostetallerken</div><div class="rd">Med 4 forskellige slags udvalgte oste</div><div class="rf">Assiette de fromages</div></div><div class="rp">120,-</div></div>
+        <div class="ret"><div><div class="rn">Pandekager</div><div class="rd">Med is, orangesauce og mandler</div><div class="rf">Crêpes Suzette</div></div><div class="rp">109,-</div></div>
+        <div class="ret"><div><div class="rn">Nougattærte</div><div class="rd">Serveret med frugtcoulis og is</div><div class="rf">Tarte au nougat</div></div><div class="rp">109,-</div></div>
+        <div class="ret"><div><div class="rn">Crème brûlée</div><div class="rd">Glaseret vaniljecreme med frisk tahitivanilje</div></div><div class="rp">109,-</div></div>
+        <div class="ret"><div><div class="rn">Gammeldags æblekage</div><div class="rd">Med pisket fløde og makroner</div></div><div class="rp">99,-</div></div>
+        <div class="ret"><div><div class="rn">Coupe Danois</div><div class="rd">Vaniljeis med chokoladesauce</div></div><div class="rp">89,-</div></div>
+      </div>
+      <div class="kat">
+        <h4>Kaffe &amp; the</h4>
+        <div class="ret"><div><div class="rn">Espresso</div><div class="rd">Brygget på italienske Lavazzas mørkbrændte bønner</div></div><div class="rp">38,-</div></div>
+        <div class="ret"><div><div class="rn">Cappuccino</div><div class="rd">Espresso med varmt og cremet mælkeskum</div></div><div class="rp">39,-</div></div>
+        <div class="ret"><div><div class="rn">Café latte</div><div class="rd">Espresso med varm opskummet mælk</div></div><div class="rp">42,-</div></div>
+        <div class="ret"><div><div class="rn">Café creme</div><div class="rd">Kaffe brygget på lysbrændte bønner – cremet på toppen og fuld af aroma</div></div><div class="rp">36,-</div></div>
+        <div class="ret"><div><div class="rn">Café irlandais</div><div class="rd">Irsk kaffe – kaffe med whisky, pisket fløde og sukker</div></div><div class="rp">79,-</div></div>
+        <div class="ret"><div><div class="rn">Café français</div><div class="rd">Fransk kaffe – kaffe med Cointreau og pisket fløde</div></div><div class="rp">79,-</div></div>
+        <div class="ret"><div><div class="rn">Café chartreuse</div><div class="rd">Kaffe med Chartreuse Verte og pisket fløde</div></div><div class="rp">79,-</div></div>
+        <div class="ret"><div><div class="rn">The</div></div><div class="rp">36,-</div></div>
+        <div class="ret"><div><div class="rn">Varm chokolade</div><div class="rd">Med flødeskum</div></div><div class="rp">42,-</div></div>
+      </div>
+    </div>
+
+    <!-- Provence menu -->
+    <div class="mcard" id="m-provence">
+      <div class="mhead"><h3>Provence menu</h3><span class="when">Alle dage · 2 retter fra 289,- · 3 retter fra 299,-</span></div>
+      <div class="kat">
+        <h4>Forretter</h4>
+        <p class="knote">En klassisk start på fransk manér – serveret med hjemmebagt brød og smør</p>
+        <div class="ret"><div class="rn">Fiskesuppe</div></div>
+        <div class="ret"><div><div class="rn">Salat med rejer</div><div class="rd">Med chilimayo</div></div></div>
+        <div class="ret"><div><div class="rn">2 stk. østers</div><div class="rd">Naturel med rødløgsvinaigrette, citron og tabasco</div></div></div>
+        <div class="ret"><div><div class="rn">Røget laks</div><div class="rd">Med spinat à la creme</div></div></div>
+        <div class="ret"><div><div class="rn">Blåmuslinger</div><div class="rd">Hvidvinsdampede</div></div></div>
+        <div class="ret"><div><div class="rn">Carpaccio</div><div class="rd">Af oksekød, serveres med parmesan, pesto og marineret salat</div></div><div class="rp">+10,-</div></div>
+        <div class="ret"><div><div class="rn">Snegle</div><div class="rd">I hvidløgssmør</div></div></div>
+      </div>
+      <div class="kat">
+        <h4>Hovedretter</h4>
+        <p class="knote">Udvalgte franske specialiteter med masser af smag og kærlighed til råvarerne</p>
+        <div class="ret"><div><div class="rn">Pebersteak</div><div class="rd">Af kalvefilet med mild pebersauce og små kartofler</div></div></div>
+        <div class="ret"><div><div class="rn">Laks</div><div class="rd">Ovnbagt, med pasta</div></div></div>
+        <div class="ret"><div><div class="rn">Perlehønebryst</div><div class="rd">Med svampe à la creme og små krydderkartofler</div></div></div>
+        <div class="ret"><div><div class="rn">Confit de canard</div><div class="rd">Med rødvinssauce og små krydderkartofler</div></div><div class="rp">+10,-</div></div>
+      </div>
+      <div class="kat">
+        <h4>Desserter</h4>
+        <p class="knote">Afslut med sødt, cremet eller friskt – i ægte fransk stil</p>
+        <div class="ret"><div><div class="rn">Fransk kaffe</div><div class="rd">Med pisket fløde</div></div><div class="rp">+10,-</div></div>
+        <div class="ret"><div><div class="rn">Chokolademousse</div><div class="rd">Med frugtcoulis</div></div></div>
+        <div class="ret"><div><div class="rn">Nougattærte</div><div class="rd">Serveret med frugtcoulis og is</div></div></div>
+        <div class="ret"><div><div class="rn">Ost</div><div class="rd">Med oliven og sprødt</div></div></div>
+        <div class="ret"><div><div class="rn">Crème brûlée</div><div class="rd">Glaseret vaniljecreme med frisk tahitivanilje</div></div></div>
+        <div class="ret"><div><div class="rn">Pandekager</div><div class="rd">Med is</div></div></div>
+        <div class="ret"><div><div class="rn">Gammeldags æblekage</div><div class="rd">Med pisket fløde og makroner</div></div></div>
+      </div>
+      <div class="stamp">
+        <div class="sb">Vinmenu: 2 glas 250,- · 3 glas 275,-</div>
+        <p>Tre nøje udvalgte glas – frisk hvidvin, fyldig rødvin og dessert-/portvin, afstemt med retterne.</p>
+      </div>
+      <p class="obs">Smartbox, Morebox etc. kan ikke bruges til denne menu.</p>
+    </div>
+
+    <!-- Månedens menu -->
+    <div class="mcard" id="m-maaned">
+      <div class="mhead"><h3>Månedens menu</h3><span class="when">Sommermenu</span></div>
+      <div class="kat">
+        <div class="ret"><div><div class="rn">Aperitif</div><div class="rd">Aperol Spritz og bruschetta</div></div><div class="rp">45,-</div></div>
+        <div class="ret"><div><div class="rn">Forret</div><div class="rd">Valgfri forret fra menukortet</div></div></div>
+        <div class="ret"><div><div class="rn">Hovedret</div><div class="rd">Fyldt perlehønebryst eller kalvemørbrad med kartoffelgratin og pebersauce med svampe</div></div></div>
+        <div class="ret"><div><div class="rn">Dessert</div><div class="rd">Crème brûlée</div></div></div>
+      </div>
+      <div class="stamp">
+        <div class="sb">3-retters menu – kun 295,-</div>
+        <p>Vinmenu kan tilkøbes for 275,- (hvidvin, rødvin &amp; dessert-/portvin)</p>
+      </div>
+      <p class="obs">OBS: MoreBox kan ikke benyttes til denne menu.</p>
+    </div>
+
+    <!-- Vinkort -->
+    <div class="mcard" id="vin">
+      <div class="mhead"><h3>Vinkort</h3><span class="when">Hovedvægt på franske vine – i alle prisklasser</span></div>
+      <p class="knote" style="font-style:italic;color:var(--soft);margin-top:10px">Der tages forbehold for prisændringer og udgåede vine.</p>
+      <div class="vin-cols" style="margin-top:26px">
+
+        <div class="vin-blok">
+          <h4>Champagne &amp; Crémant</h4>
+          <div class="vin"><span>Crémant d'Alsace</span><span class="vp">369,-</span></div>
+          <div class="vin"><span>Crémant d'Alsace Rosé</span><span class="vp">369,-</span></div>
+          <div class="vin"><span>Pol Roger, Extra Cuvée de Réserve<span class="vd">Champagne</span></span><span class="vp">689,-</span></div>
+        </div>
+
+        <div class="vin-blok">
+          <h4>Hvidvine</h4>
+          <h5>Provence</h5>
+          <div class="vin"><span>1/1 Côté Mas<span class="vd">Paul Mas</span></span><span class="vp">289,-</span></div>
+          <div class="vin"><span>1/1 Luberon Blanc<span class="vd">Famille Perrin</span></span><span class="vp">299,-</span></div>
+          <h5>Bourgogne</h5>
+          <div class="vin"><span>Mâcon Villages Mémoire du Terroir<span class="vd">Jean Marc Boillot</span></span><span class="vp">495,-</span></div>
+          <div class="vin"><span>Pouilly Fuissé<span class="vd">Château de Beauregard</span></span><span class="vp">475,-</span></div>
+          <div class="vin"><span>Saint Véran<span class="vd">Château de Beauregard</span></span><span class="vp">465,-</span></div>
+          <div class="vin"><span>Rully<span class="vd">Faiveley</span></span><span class="vp">525,-</span></div>
+          <div class="vin"><span>Bourgogne Clos du Château<span class="vd">Château de Meursault</span></span><span class="vp">999,-</span></div>
+          <div class="vin"><span>Bourgogne<span class="vd">Faiveley</span></span><span class="vp">399,-</span></div>
+          <div class="vin"><span>Meursault 1er Cru<span class="vd">Faiveley</span></span><span class="vp">899,-</span></div>
+          <div class="vin"><span>Puligny Montrachet<span class="vd">Jean Marc Boillot</span></span><span class="vp">945,-</span></div>
+          <div class="vin"><span>Chassagne Montrachet Vieilles Vignes<span class="vd">Vincent Girardin</span></span><span class="vp">1225,-</span></div>
+          <div class="vin"><span>Chablis<span class="vd">Billaud-Simon</span></span><span class="vp">545,-</span></div>
+          <div class="vin"><span>Mercurey Clos Rochette<span class="vd">Faiveley</span></span><span class="vp">799,-</span></div>
+          <h5>Loire</h5>
+          <div class="vin"><span>Pouilly Fumé<span class="vd">Cedrick Bardin</span></span><span class="vp">435,-</span></div>
+          <div class="vin"><span>La Petite Perrière Sauvignon Blanc<span class="vd">Guy Saget</span></span><span class="vp">369,-</span></div>
+          <div class="vin"><span>Sancerre<span class="vd">Cedrick Bardin</span></span><span class="vp">435,-</span></div>
+          <h5>Alsace</h5>
+          <div class="vin"><span>Pinot Blanc<span class="vd">Trimbach</span></span><span class="vp">359,-</span></div>
+          <div class="vin"><span>Riesling<span class="vd">Trimbach</span></span><span class="vp">379,-</span></div>
+          <div class="vin"><span>Pinot Gris Réserve<span class="vd">Trimbach</span></span><span class="vp">379,-</span></div>
+          <div class="vin"><span>Gewurztraminer<span class="vd">Trimbach</span></span><span class="vp">379,-</span></div>
+          <div class="vin"><span>Riesling Cuvée Frédéric Émile<span class="vd">Trimbach</span></span><span class="vp">799,-</span></div>
+          <div class="vin"><span>Riesling Sélection de Vieilles Vignes<span class="vd">Trimbach</span></span><span class="vp">599,-</span></div>
+          <h5>Ikke-franske hvidvine</h5>
+          <div class="vin"><span>Italien – Pinot Grigio<span class="vd">La Tunella</span></span><span class="vp">365,-</span></div>
+          <div class="vin"><span>Tyskland – Riesling<span class="vd">S. A. Prüm</span></span><span class="vp">345,-</span></div>
+          <div class="vin"><span>Spanien – Albariño de Fefiñanes<span class="vd">Bodegas del Palacio de Fefiñanes</span></span><span class="vp">395,-</span></div>
+          <div class="vin"><span>Sydafrika – Chardonnay<span class="vd">Rustenberg</span></span><span class="vp">375,-</span></div>
+          <div class="vin"><span>New Zealand – Sauvignon Blanc<span class="vd">Dashwood</span></span><span class="vp">399,-</span></div>
+          <div class="vin"><span>USA – Chardonnay<span class="vd">Ramey</span></span><span class="vp">799,-</span></div>
+        </div>
+
+        <div class="vin-blok">
+          <h4>Rosévine</h4>
+          <div class="vin"><span>Pinot Noir Rosé<span class="vd">La Petite Perrière, Loire</span></span><span class="vp">345,-</span></div>
+          <div class="vin"><span>Château Montaud Rosé<span class="vd">Côtes de Provence</span></span><span class="vp">335,-</span></div>
+          <div class="vin"><span>Côté Mas Rosé Aurore<span class="vd">Sud de France</span></span><span class="vp">289,-</span></div>
+        </div>
+
+        <div class="vin-blok">
+          <h4>Rødvine</h4>
+          <h5>Provence</h5>
+          <div class="vin"><span>1/1 Côté Mas<span class="vd">Paul Mas</span></span><span class="vp">289,-</span></div>
+          <div class="vin"><span>Ventoux<span class="vd">Famille Perrin</span></span><span class="vp">299,-</span></div>
+          <h5>Bourgogne</h5>
+          <div class="vin"><span>Morgon Grand Cras<span class="vd">Domaine Joseph Burrier</span></span><span class="vp">389,-</span></div>
+          <div class="vin"><span>Gevrey Chambertin<span class="vd">Faiveley</span></span><span class="vp">999,-</span></div>
+          <div class="vin"><span>Mercurey Clos des Myglands<span class="vd">Faiveley</span></span><span class="vp">639,-</span></div>
+          <div class="vin"><span>Bourgogne Pinot Noir<span class="vd">Faiveley</span></span><span class="vp">425,-</span></div>
+          <div class="vin"><span>Morey Saint Denis<span class="vd">Domaine des Beaumont</span></span><span class="vp">729,-</span></div>
+          <div class="vin"><span>Chambolle Musigny<span class="vd">Bryczek</span></span><span class="vp">785,-</span></div>
+          <h5>Bordeaux</h5>
+          <div class="vin"><span>Château Vieille Tour La Rose Grand Cru<span class="vd">Saint-Émilion</span></span><span class="vp">599,-</span></div>
+          <div class="vin"><span>Barrail du Blanc Grand Cru<span class="vd">Saint-Émilion</span></span><span class="vp">699,-</span></div>
+          <div class="vin"><span>Château Rocheyron<span class="vd">Saint-Émilion</span></span><span class="vp">1299,-</span></div>
+          <div class="vin"><span>Château Tertre Roteboeuf Grand Cru<span class="vd">Saint-Émilion</span></span><span class="vp">1699,-</span></div>
+          <div class="vin"><span>Château Lafleur Gazin<span class="vd">Pomerol</span></span><span class="vp">745,-</span></div>
+          <div class="vin"><span>Château Latour à Pomerol<span class="vd">Pomerol</span></span><span class="vp">999,-</span></div>
+          <div class="vin"><span>Les Tourelles de Longueville<span class="vd">Médoc</span></span><span class="vp">699,-</span></div>
+          <div class="vin"><span>Château Meyney Cru Bourgeois<span class="vd">Médoc</span></span><span class="vp">789,-</span></div>
+          <h5>Rhône</h5>
+          <div class="vin"><span>Gigondas<span class="vd">Domaine Brusset</span></span><span class="vp">475,-</span></div>
+          <div class="vin"><span>Châteauneuf-du-Pape<span class="vd">Blason Prince</span></span><span class="vp">575,-</span></div>
+          <h5>Italien</h5>
+          <div class="vin"><span>Valpolicella Ripasso<span class="vd">La Casa do Reberta</span></span><span class="vp">389,-</span></div>
+          <div class="vin"><span>Amarone della Valpolicella<span class="vd">Ca' Vendri</span></span><span class="vp">599,-</span></div>
+          <div class="vin"><span>Brunello di Montalcino<span class="vd">Tenuta di Nardi</span></span><span class="vp">699,-</span></div>
+          <div class="vin"><span>Il Piccolo<span class="vd">Peter Vinding-Diers, Montecarrubo</span></span><span class="vp">699,-</span></div>
+          <h5>Spanien</h5>
+          <div class="vin"><span>Unico<span class="vd">Vega Sicilia</span></span><span class="vp">2.900,-</span></div>
+          <div class="vin"><span>Alion<span class="vd">Vega Sicilia</span></span><span class="vp">999,-</span></div>
+          <div class="vin"><span>Hacienda Monasterio<span class="vd">Bodegas Hacienda Monasterio</span></span><span class="vp">795,-</span></div>
+          <div class="vin"><span>Flor de Pingus<span class="vd">Bodegas Hacienda Monasterio</span></span><span class="vp">1.299,-</span></div>
+          <div class="vin"><span>Amancio<span class="vd">Bodegas Sierra Cantabria</span></span><span class="vp">899,-</span></div>
+          <div class="vin"><span>Finca El Bosque<span class="vd">Bodegas Sierra Cantabria</span></span><span class="vp">899,-</span></div>
+          <h5>Amerika</h5>
+          <div class="vin"><span>Malbec Terroir<span class="vd">Alta Vista</span></span><span class="vp">425,-</span></div>
+          <div class="vin"><span>Zinfandel<span class="vd">Castoro</span></span><span class="vp">399,-</span></div>
+          <div class="vin"><span>Cabernet Sauvignon<span class="vd">Raywood</span></span><span class="vp">379,-</span></div>
+        </div>
+
+        <div class="vin-blok">
+          <h4>Dessertvine</h4>
+          <div class="vin"><span>Sauternes</span><span class="vp">395,-</span></div>
+          <div class="vin"><span>Sauternes<span class="vd">pr. glas</span></span><span class="vp">95,-</span></div>
+        </div>
+
+        <div class="vin-blok">
+          <h4>Hvidvin &amp; rosé – ½ flasker</h4>
+          <div class="vin"><span>Gewurztraminer<span class="vd">Trimbach</span></span><span class="vp">259,-</span></div>
+          <div class="vin"><span>Pinot Gris Réserve<span class="vd">Trimbach</span></span><span class="vp">259,-</span></div>
+          <div class="vin"><span>Riesling<span class="vd">Trimbach</span></span><span class="vp">259,-</span></div>
+          <div class="vin"><span>Chablis<span class="vd">Pascal Bouchard</span></span><span class="vp">279,-</span></div>
+          <div class="vin"><span>Château Montaud Rosé<span class="vd">Côtes de Provence</span></span><span class="vp">229,-</span></div>
+          <div class="vin"><span>Claude Val Blanc<span class="vd">Paul Mas</span></span><span class="vp">139,-</span></div>
+        </div>
+
+        <div class="vin-blok">
+          <h4>Rødvine – ½ flasker</h4>
+          <div class="vin"><span>Fleurie<span class="vd">Château de Beauregard</span></span><span class="vp">235,-</span></div>
+          <div class="vin"><span>Chianti<span class="vd">Poggiotondo</span></span><span class="vp">265,-</span></div>
+          <div class="vin"><span>Merlot<span class="vd">Tunella</span></span><span class="vp">245,-</span></div>
+          <div class="vin"><span>Amarone</span><span class="vp">299,-</span></div>
+          <div class="vin"><span>Claude Val Rouge</span><span class="vp">139,-</span></div>
+          <div class="vin"><span>Barrail du Blanc</span><span class="vp">299,-</span></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= BOOKING ================= -->
+<section class="booking3" id="book">
+  <div class="wrap">
+    <span class="tag">Réservez</span>
+    <h2 class="big">Book dit bord</h2>
+    <div class="bbox">
+      <!-- ============================================================
+           BOOKING-WIDGET:
+           Indsæt embed-koden fra jeres eksisterende booking-system her
+           (samme system som på restaurant-provence.dk/book-bord).
+           Indtil da linker knappen til den nuværende booking-side.
+           ============================================================ -->
+      <h3>Online bordbestilling</h3>
+      <p>Reservér online døgnet rundt – hurtigt og nemt med bekræftelse på mail.<br>Er der mindre end 24 timer til din ønskede reservation, bedes du ringe i stedet.</p>
+      <a class="tel" href="tel:+4598135133">(+45) 98 13 51 33</a>
+      <p><a href="mailto:booking@restaurant-provence.dk">booking@restaurant-provence.dk</a></p>
+      <p style="margin-top:20px"><a class="btn btn-red" href="https://restaurant-provence.dk/book-bord/">Book bord online</a></p>
+      <p style="font-size:.85rem;margin-top:20px"><a href="https://restaurant-provence.dk/book-bord/gaest-konto/">Tilgå din eksisterende booking her</a></p>
+    </div>
+    <p class="obs">Bliv ikke snydt af vores tidsintervaller – du er velkommen til at blive hos os, så længe du har lyst. Vi sætter dog pris på, at du møder op til tiden.</p>
+  </div>
+</section>
+
+<!-- ================= KONTAKT ================= -->
+<section id="kontakt">
+  <div class="wrap">
+    <span class="tag green">À bientôt</span>
+    <h2 class="big">Kontakt &amp; find os</h2>
+    <div class="k-grid" style="margin-top:26px">
+      <div class="k-card">
+        <h3>Café Provence</h3>
+        <div class="k-line"><span>📍</span><a href="https://maps.app.goo.gl/EtGgiSbTq1vwKqNC7" target="_blank" rel="noopener">Ved Stranden 11, 9000 Aalborg</a></div>
+        <div class="k-line"><span>📞</span><a href="tel:+4598135133">(+45) 98 13 51 33</a></div>
+        <div class="k-line"><span>✉️</span><a href="mailto:kontakt@restaurant-provence.dk">kontakt@restaurant-provence.dk</a></div>
+        <div class="k-line"><span>👍</span><a href="https://www.facebook.com/provence.dk/" target="_blank" rel="noopener">Følg os på Facebook</a></div>
+        <table>
+          <tr><td>Mandag – Fredag</td><td>fra kl. 12</td></tr>
+          <tr><td>Lørdag – Søndag</td><td>fra kl. 11</td></tr>
+        </table>
+        <p style="font-size:.85rem;color:var(--soft);margin-top:12px;font-style:italic">Brunch: man–fre 11–13, lør–søn 10–13 · Caféretter dagligt 12–16 · À la carte fra kl. 17</p>
+      </div>
+      <div class="k-map">
+        <iframe title="Kort – Café Provence, Ved Stranden 11, Aalborg" src="https://maps.google.com/maps?q=57.05051932177851%2C+9.920052596991802&t=ROADMAP&z=17&output=embed&iwloc=near" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="fm">Café <i>Provence</i></div>
+  <div class="flinks">
+    <a href="#om">Om os</a>
+    <a href="#menukort">Menukort</a>
+    <a href="#vin">Vinkort</a>
+    <a href="#book">Book bord</a>
+    <a href="https://www.findsmiley.dk/538551" target="_blank" rel="noopener">Smiley-rapporter</a>
+  </div>
+  <p>Ved Stranden 11, 9000 Aalborg · <a href="tel:+4598135133">(+45) 98 13 51 33</a> · <a href="mailto:kontakt@restaurant-provence.dk">kontakt@restaurant-provence.dk</a></p>
+  <p style="margin-top:10px">© 2026 Café Provence · cafeprovence.dk · Alle rettigheder forbeholdes.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('header nav a').forEach(function(a){
+    a.addEventListener('click', function(){document.querySelector('header nav').classList.remove('open')});
+  });
+</script>
+</body>
+</html>
